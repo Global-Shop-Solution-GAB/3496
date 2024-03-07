@@ -1,0 +1,1908 @@
+Program.Sub.ScreenSU.Start
+gui.Form1..create
+gui.Form1..caption("ATG Sales Analysis Reports")
+gui.Form1..size(9240,9150)
+gui.Form1..position(0,0)
+gui.Form1..event(unload,form1_unload)
+gui.Form1..alwaysontop(False)
+gui.Form1..fontname("Arial")
+gui.Form1..fontsize(8)
+gui.Form1..forecolor(0)
+gui.Form1..fontstyle(,,,,)
+gui.Form1..BackColor(-2147483633)
+gui.Form1..controlbox(True)
+gui.Form1..maxbutton(True)
+gui.Form1..minbutton(True)
+gui.Form1..mousepointer(0)
+gui.Form1..moveable(True)
+gui.Form1..sizeable(True)
+gui.Form1..ShowInTaskBar(True)
+gui.Form1..titlebar(True)
+gui.Form1.frame4.create(frame)
+gui.Form1.frame4.caption("Business Unit Range")
+gui.Form1.frame4.size(4785,1455)
+gui.Form1.frame4.position(400,1500)
+gui.Form1.frame4.visible(True)
+gui.Form1.frame4.fontname("Arial")
+gui.Form1.frame4.fontsize(8)
+gui.Form1.frame5.create(frame)
+gui.Form1.frame5.caption("Application Range")
+gui.Form1.frame5.size(8250,1455)
+gui.Form1.frame5.position(400,6200)
+gui.Form1.frame5.visible(True)
+gui.Form1.frame5.fontname("Arial")
+gui.Form1.frame5.fontsize(8)
+gui.Form1.frame6.create(frame)
+gui.Form1.frame6.caption("Salesperson Range")
+gui.Form1.frame6.size(8250,1455)
+gui.Form1.frame6.position(400,3100)
+gui.Form1.frame6.visible(True)
+gui.Form1.frame6.fontname("Arial")
+gui.Form1.frame6.fontsize(8)
+gui.Form1.frame7.create(frame)
+gui.Form1.frame7.caption("Customer Range")
+gui.Form1.frame7.size(8250,1455)
+gui.Form1.frame7.position(400,4645)
+gui.Form1.frame7.visible(True)
+gui.Form1.frame7.fontname("Arial")
+gui.Form1.frame7.fontsize(8)
+gui.Form1.datepickerFrm.create(datepicker)
+gui.Form1.datepickerFrm.visible(True)
+gui.Form1.datepickerFrm.size(1935,330)
+gui.Form1.datepickerFrm.zorder(0)
+gui.Form1.datepickerFrm.position(3215,700)
+gui.Form1.datepickerFrm.enabled(True)
+gui.Form1.datepickerFrm.checkbox(False)
+gui.Form1.datepickerThru.create(datepicker)
+gui.Form1.datepickerThru.visible(True)
+gui.Form1.datepickerThru.size(1935,330)
+gui.Form1.datepickerThru.zorder(0)
+gui.Form1.datepickerThru.position(5515,700)
+gui.Form1.datepickerThru.enabled(True)
+gui.Form1.datepickerThru.checkbox(False)
+gui.Form1.chkAllDates.create(checkbox)
+gui.Form1.chkAllDates.caption("All Dates")
+gui.Form1.chkAllDates.visible(True)
+gui.Form1.chkAllDates.size(1935,255)
+gui.Form1.chkAllDates.zorder(0)
+gui.Form1.chkAllDates.position(3225,1100)
+gui.Form1.chkAllDates.enabled(True)
+gui.Form1.chkAllDates.alignment(0)
+gui.Form1.chkAllDates.fontname("Arial")
+gui.Form1.chkAllDates.fontsize(8)
+gui.Form1.dropdownlistBUFrm.create(dropdownlist)
+gui.Form1.dropdownlistBUFrm.visible(True)
+gui.Form1.dropdownlistBUFrm.size(1455,330)
+gui.Form1.dropdownlistBUFrm.zorder(0)
+gui.Form1.dropdownlistBUFrm.position(300,500)
+gui.Form1.dropdownlistBUFrm.enabled(True)
+gui.Form1.dropdownlistBUFrm.parent("frame4")
+gui.Form1.dropdownlistBUFrm.fontname("Arial")
+gui.Form1.dropdownlistBUFrm.fontsize(8)
+gui.Form1.dropdownlistBUFrm.event(click,dropdownlistbufrm_change)
+gui.Form1.dropdownlistBUend.create(dropdownlist)
+gui.Form1.dropdownlistBUend.visible(True)
+gui.Form1.dropdownlistBUend.size(1455,330)
+gui.Form1.dropdownlistBUend.zorder(0)
+gui.Form1.dropdownlistBUend.position(2720,500)
+gui.Form1.dropdownlistBUend.enabled(True)
+gui.Form1.dropdownlistBUend.parent("frame4")
+gui.Form1.dropdownlistBUend.fontname("Arial")
+gui.Form1.dropdownlistBUend.fontsize(8)
+gui.Form1.lbl3.create(label,"Beginning",True,1395,255,1,300,290,True,0,Arial,8,-2147483633,0)
+gui.Form1.lbl3.parent("frame4")
+gui.Form1.lbl4.create(label,"Ending",True,1395,255,1,2700,300,True,0,Arial,8,-2147483633,0)
+gui.Form1.lbl4.parent("frame4")
+gui.Form1.chkBUAll.create(checkbox)
+gui.Form1.chkBUAll.caption("All Business Units")
+gui.Form1.chkBUAll.visible(True)
+gui.Form1.chkBUAll.size(1935,255)
+gui.Form1.chkBUAll.zorder(0)
+gui.Form1.chkBUAll.position(300,900)
+gui.Form1.chkBUAll.enabled(True)
+gui.Form1.chkBUAll.alignment(0)
+gui.Form1.chkBUAll.parent("frame4")
+gui.Form1.chkBUAll.fontname("Arial")
+gui.Form1.chkBUAll.fontsize(8)
+gui.Form1.dropdownlistAPPLBegin.create(dropdownlist)
+gui.Form1.dropdownlistAPPLBegin.visible(True)
+gui.Form1.dropdownlistAPPLBegin.size(3765,330)
+gui.Form1.dropdownlistAPPLBegin.zorder(0)
+gui.Form1.dropdownlistAPPLBegin.position(280,500)
+gui.Form1.dropdownlistAPPLBegin.enabled(True)
+gui.Form1.dropdownlistAPPLBegin.parent("frame5")
+gui.Form1.dropdownlistAPPLBegin.fontname("Arial")
+gui.Form1.dropdownlistAPPLBegin.fontsize(8)
+gui.Form1.dropdownlistAPPLBegin.event(click,dropdownlistapplbegin_change)
+gui.Form1.dropdownlistAPPLEnd.create(dropdownlist)
+gui.Form1.dropdownlistAPPLEnd.visible(True)
+gui.Form1.dropdownlistAPPLEnd.size(3765,330)
+gui.Form1.dropdownlistAPPLEnd.zorder(0)
+gui.Form1.dropdownlistAPPLEnd.position(4310,500)
+gui.Form1.dropdownlistAPPLEnd.enabled(True)
+gui.Form1.dropdownlistAPPLEnd.parent("frame5")
+gui.Form1.dropdownlistAPPLEnd.fontname("Arial")
+gui.Form1.dropdownlistAPPLEnd.fontsize(8)
+gui.Form1.lbl5.create(label,"Beginning",True,1395,255,1,300,290,True,0,Arial,8,-2147483633,0)
+gui.Form1.lbl5.parent("frame5")
+gui.Form1.lbl6.create(label,"Ending",True,1395,255,1,4300,305,True,0,Arial,8,-2147483633,0)
+gui.Form1.lbl6.parent("frame5")
+gui.Form1.chkAllAppl.create(checkbox)
+gui.Form1.chkAllAppl.caption("All Applications")
+gui.Form1.chkAllAppl.visible(True)
+gui.Form1.chkAllAppl.size(1935,255)
+gui.Form1.chkAllAppl.zorder(0)
+gui.Form1.chkAllAppl.position(300,900)
+gui.Form1.chkAllAppl.enabled(True)
+gui.Form1.chkAllAppl.alignment(0)
+gui.Form1.chkAllAppl.parent("frame5")
+gui.Form1.chkAllAppl.fontname("Arial")
+gui.Form1.chkAllAppl.fontsize(8)
+gui.Form1.dropdownlistBegRep.create(dropdownlist)
+gui.Form1.dropdownlistBegRep.visible(True)
+gui.Form1.dropdownlistBegRep.size(3765,330)
+gui.Form1.dropdownlistBegRep.zorder(0)
+gui.Form1.dropdownlistBegRep.position(300,500)
+gui.Form1.dropdownlistBegRep.enabled(True)
+gui.Form1.dropdownlistBegRep.parent("frame6")
+gui.Form1.dropdownlistBegRep.fontname("Arial")
+gui.Form1.dropdownlistBegRep.fontsize(8)
+gui.Form1.dropdownlistBegRep.event(click,dropdownlistbegrep_change)
+gui.Form1.dropdownlistEndRep.create(dropdownlist)
+gui.Form1.dropdownlistEndRep.visible(True)
+gui.Form1.dropdownlistEndRep.size(3765,330)
+gui.Form1.dropdownlistEndRep.zorder(0)
+gui.Form1.dropdownlistEndRep.position(4310,500)
+gui.Form1.dropdownlistEndRep.enabled(True)
+gui.Form1.dropdownlistEndRep.parent("frame6")
+gui.Form1.dropdownlistEndRep.fontname("Arial")
+gui.Form1.dropdownlistEndRep.fontsize(8)
+gui.Form1.lbl7.create(label,"Beginning",True,1395,255,1,300,290,True,0,Arial,8,-2147483633,0)
+gui.Form1.lbl7.parent("frame6")
+gui.Form1.lbl8.create(label,"Ending",True,1395,255,1,4310,300,True,0,Arial,8,-2147483633,0)
+gui.Form1.lbl8.parent("frame6")
+gui.Form1.chkAllReps.create(checkbox)
+gui.Form1.chkAllReps.caption("All Salespeople")
+gui.Form1.chkAllReps.visible(True)
+gui.Form1.chkAllReps.size(1935,255)
+gui.Form1.chkAllReps.zorder(0)
+gui.Form1.chkAllReps.position(300,900)
+gui.Form1.chkAllReps.enabled(True)
+gui.Form1.chkAllReps.alignment(0)
+gui.Form1.chkAllReps.parent("frame6")
+gui.Form1.chkAllReps.fontname("Arial")
+gui.Form1.chkAllReps.fontsize(8)
+gui.Form1.lbl9.create(label,"Beginning",True,1395,255,1,300,290,True,0,Arial,8,-2147483633,0)
+gui.Form1.lbl9.parent("frame7")
+gui.Form1.lbl10.create(label,"Ending",True,1395,255,1,4310,300,True,0,Arial,8,-2147483633,0)
+gui.Form1.lbl10.parent("frame7")
+gui.Form1.chkALLCust.create(checkbox)
+gui.Form1.chkALLCust.caption("All Customers")
+gui.Form1.chkALLCust.visible(True)
+gui.Form1.chkALLCust.size(1935,255)
+gui.Form1.chkALLCust.zorder(0)
+gui.Form1.chkALLCust.position(300,900)
+gui.Form1.chkALLCust.enabled(True)
+gui.Form1.chkALLCust.alignment(0)
+gui.Form1.chkALLCust.parent("frame7")
+gui.Form1.chkALLCust.fontname("Arial")
+gui.Form1.chkALLCust.fontsize(8)
+gui.Form1.cmdOk.create(button)
+gui.Form1.cmdOk.caption("Ok")
+gui.Form1.cmdOk.visible(True)
+gui.Form1.cmdOk.size(855,375)
+gui.Form1.cmdOk.zorder(0)
+gui.Form1.cmdOk.position(7300,7900)
+gui.Form1.cmdOk.enabled(True)
+gui.Form1.cmdOk.fontname("Arial")
+gui.Form1.cmdOk.fontsize(8)
+gui.Form1.cmdOk.event(click,cmdok_click)
+gui.Form1.dropdownlistRptType.create(dropdownlist)
+gui.Form1.dropdownlistRptType.visible(True)
+gui.Form1.dropdownlistRptType.size(2145,330)
+gui.Form1.dropdownlistRptType.zorder(0)
+gui.Form1.dropdownlistRptType.position(560,700)
+gui.Form1.dropdownlistRptType.enabled(True)
+gui.Form1.dropdownlistRptType.fontname("Arial")
+gui.Form1.dropdownlistRptType.fontsize(8)
+gui.Form1.dropdownlistRptType.event(click,dropdownlistrpttype_click)
+gui.Form1.lbl11.create(label,"Select Report",True,1335,255,1,590,515,True,0,Arial,8,-2147483633,0)
+gui.Form1.lblDate.create(label,"Reporting Period",True,1935,255,1,3275,515,True,0,Arial,8,-2147483633,0)
+gui.Form1.lblto.create(label,"to",True,240,165,1,5215,790,True,2,Arial,8,-2147483633,0)
+gui.Form1.chkopen.create(checkbox)
+gui.Form1.chkopen.caption("Open")
+gui.Form1.chkopen.visible(True)
+gui.Form1.chkopen.size(780,330)
+gui.Form1.chkopen.zorder(0)
+gui.Form1.chkopen.position(5700,1600)
+gui.Form1.chkopen.enabled(True)
+gui.Form1.chkopen.alignment(0)
+gui.Form1.chkopen.fontname("Arial")
+gui.Form1.chkopen.fontsize(8)
+gui.Form1.chkClosed.create(checkbox)
+gui.Form1.chkClosed.caption("Closed")
+gui.Form1.chkClosed.visible(True)
+gui.Form1.chkClosed.size(990,330)
+gui.Form1.chkClosed.zorder(0)
+gui.Form1.chkClosed.position(6900,1600)
+gui.Form1.chkClosed.enabled(True)
+gui.Form1.chkClosed.alignment(0)
+gui.Form1.chkClosed.fontname("Arial")
+gui.Form1.chkClosed.fontsize(8)
+gui.Form1.txtCustFrm.create(textbox,"",True,3510,300,0,300,510,True,0,Arial,8,-2147483643,1)
+gui.Form1.txtCustFrm.parent("frame7")
+gui.Form1.txtCustFrm.event(change,txtcustfrm_change)
+gui.Form1.txtCustThru.create(textbox,"",True,3510,300,0,4310,510,True,0,Arial,8,-2147483643,1)
+gui.Form1.txtCustThru.parent("frame7")
+gui.Form1.cmdCustBrwse1.create(button)
+gui.Form1.cmdCustBrwse1.caption("^")
+gui.Form1.cmdCustBrwse1.visible(True)
+gui.Form1.cmdCustBrwse1.size(285,300)
+gui.Form1.cmdCustBrwse1.zorder(0)
+gui.Form1.cmdCustBrwse1.position(3800,510)
+gui.Form1.cmdCustBrwse1.enabled(True)
+gui.Form1.cmdCustBrwse1.parent("frame7")
+gui.Form1.cmdCustBrwse1.fontname("Arial")
+gui.Form1.cmdCustBrwse1.fontsize(8)
+gui.Form1.cmdCustBrwse1.event(click,cmdcustbrwse_click)
+gui.Form1.cmdCustBrwse2.create(button)
+gui.Form1.cmdCustBrwse2.caption("^")
+gui.Form1.cmdCustBrwse2.visible(True)
+gui.Form1.cmdCustBrwse2.size(285,300)
+gui.Form1.cmdCustBrwse2.zorder(0)
+gui.Form1.cmdCustBrwse2.position(7800,510)
+gui.Form1.cmdCustBrwse2.enabled(True)
+gui.Form1.cmdCustBrwse2.parent("frame7")
+gui.Form1.cmdCustBrwse2.fontname("Arial")
+gui.Form1.cmdCustBrwse2.fontsize(8)
+gui.Form1.cmdCustBrwse2.event(click,cmdcustbrwse_click)
+
+
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+F.Data.DataTable.Create("Order",True)
+F.Data.DataTable.AddColumn("Order","TRMNL",String)
+F.Data.DataTable.AddColumn("Order","ORDER_NO",String)
+F.Data.DataTable.AddColumn("Order","RECORD_NO",String)
+F.Data.DataTable.AddColumn("Order","PART",String)
+F.Data.DataTable.AddColumn("Order","DESCRIPTION",String)
+F.Data.DataTable.AddColumn("Order","QTY_ORDERED",Float,0)
+F.Data.DataTable.AddColumn("Order","NAME",String)
+F.Data.DataTable.AddColumn("Order","DATE_DUE",Date)
+F.Data.DataTable.AddColumn("Order","DATE_ORDER",Date)
+F.Data.DataTable.AddColumn("Order","CODE_SORT",String,"*")
+F.Data.DataTable.AddColumn("Order","APPLICATION",String,"*")
+F.Data.DataTable.AddColumn("Order","SALESPERSON",String)
+F.Data.DataTable.AddColumn("Order","EXTENSION",Float,0)
+F.Data.DataTable.AddColumn("Order","COST",float,0)
+
+F.Data.DataTable.Create("Booking",True)
+F.Data.DataTable.AddColumn("Booking","TRMNL",String)
+F.Data.DataTable.AddColumn("Booking","ORDER_NO",String)
+F.Data.DataTable.AddColumn("Booking","Order_Line",String)
+
+F.Data.DataTable.Create("Change",True)
+F.Data.DataTable.AddColumn("Change","ORDER_NO",String)
+F.Data.DataTable.AddColumn("Change","RECORD_NO",String)
+F.Data.DataTable.AddColumn("Change","DATE_ORDER",Date)
+F.Data.DataTable.AddColumn("Change","PART",String)
+F.Data.DataTable.AddColumn("Change","NAME",String)
+F.Data.DataTable.AddColumn("Change","SALESPERSON",String)
+F.Data.DataTable.AddColumn("Change","BEFORE",float)
+F.Data.DataTable.AddColumn("Change","AFTER",float)
+F.Data.DataTable.AddColumn("Change","FIELD_NAME",string)
+
+F.Data.DataTable.Create("Header",True)
+F.Data.DataTable.AddColumn("Header","ORDER_NO",String)
+F.Data.DataTable.AddColumn("Header","CUSTOMER",String)
+F.Data.DataTable.AddColumn("Header","DATE_DUE",Date)
+F.Data.DataTable.AddColumn("Header","DATE_ORDER",Date)
+F.Data.DataTable.AddColumn("Header","CODE_SORT",String)
+F.Data.DataTable.AddColumn("Header","APPLICATION",String)
+F.Data.DataTable.AddColumn("Header","SALESPERSON",String)
+
+F.Data.DataTable.Create("Blanket",True)
+F.Data.DataTable.AddColumn("Blanket","Order_no",String)
+F.Data.DataTable.AddColumn("Blanket","Blanket_No",String)
+
+F.Data.DataTable.Create("InvHeader",True)
+F.Data.Datatable.AddColumn("InvHeader","ORDER_NO",String)
+F.Data.Datatable.AddColumn("InvHeader","CODE_SORT",String)
+F.Data.Datatable.AddColumn("InvHeader","APPLICATION",String)
+
+F.Data.DataTable.Create("Delete",True)
+F.Data.DataTable.AddColumn("Delete","ORDER_NO",String)
+F.Data.DataTable.AddColumn("Delete","ORDER_LINE",String)
+
+F.Data.DataTable.Create("BUAppl",True)
+F.Data.DataTable.AddColumn("BUAppl","ORDER_NO",String)
+F.Data.DataTable.AddColumn("BUAppl","DATE_ORDER",Date)
+F.Data.DataTable.AddColumn("BUAppl","CODE_SORT",String)
+F.Data.DataTable.AddColumn("BUAppl","DATE_DUE",Date)
+
+F.Data.DataTable.Create("Appl",True)
+F.Data.DataTable.AddColumn("Appl","ORDER_NO",String)
+F.Data.DataTable.AddColumn("Appl","User_Field_16",String)
+F.Data.DataTable.AddColumn("Appl","User_Field_31",String)
+F.Data.DataTable.AddColumn("Appl","User_Field_46",String)
+F.Data.DataTable.AddColumn("Appl","User_Field_76",String)
+
+V.Global.iBIRunID.Declare(Long)
+V.Global.iBILogID.Declare(Long)
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+F.Intrinsic.Control.Try
+
+	V.Local.sSel.Declare(String)
+	
+	'add business units to dropdown
+	Gui.Form1.dropdownlistBUFrm.AddItem("1")
+	Gui.Form1.dropdownlistBUFrm.AddItem("2")
+	Gui.Form1.dropdownlistBUFrm.AddItem("3")
+	'Gui.Form1.dropdownlistBUFrm.AddItem("4")
+	Gui.Form1.dropdownlistBUFrm.AddItem("5")
+	
+	Gui.Form1.dropdownlistBUend.AddItem("1")
+	Gui.Form1.dropdownlistBUend.AddItem("2")
+	Gui.Form1.dropdownlistBUend.AddItem("3")
+	'Gui.Form1.dropdownlistBUend.AddItem("4")
+	Gui.Form1.dropdownlistBUend.AddItem("5")
+	
+	Gui.Form1.dropdownlistRptType.AddItem("Bookings")
+	Gui.Form1.dropdownlistRptType.AddItem("Invoices")
+	'Gui.Form1.dropdownlistRptType.AddItem("Packingslips")
+	'Gui.Form1.dropdownlistRptType.AddItem("Quotations")
+	Gui.Form1.dropdownlistRptType.AddItem("Sales Orders")
+	'Gui.Form1.dropdownlistRptType.AddItem("Open Order by Cutoff Date")
+	
+	F.ODBC.Connection!Con.OpenCompanyConnection(500)
+	
+	'add applications to dropdowns
+	F.ODBC.Connection!Con.OpenRecordsetRO("rstA","select distinct USER_FIELD_16 as UF from ATG_OE_USER_FIELDS where USER_FIELD_16 <> '' order by USER_FIELD_16")
+		F.Intrinsic.Control.DoUntil(V.ODBC.Con!rstA.EOF,=,True)
+			Gui.Form1.dropdownlistAPPLBegin.AddItem(V.ODBC.Con!rstA.FieldValTrim!UF)
+			Gui.Form1.dropdownlistAPPLEnd.AddItem(V.ODBC.Con!rstA.FieldValTrim!UF)
+		F.ODBC.Con!rstA.MoveNext
+		F.Intrinsic.Control.Loop
+	F.ODBC.Con!rstA.Close
+	
+	F.ODBC.Connection!Con.OpenRecordsetRO("rstA","select distinct USER_FIELD_31 as UF from ATG_OE_USER_FIELDS where USER_FIELD_31 <> '' order by USER_FIELD_31")
+		F.Intrinsic.Control.DoUntil(V.ODBC.Con!rstA.EOF,=,True)
+			Gui.Form1.dropdownlistAPPLBegin.AddItem(V.ODBC.Con!rstA.FieldValTrim!UF)
+			Gui.Form1.dropdownlistAPPLEnd.AddItem(V.ODBC.Con!rstA.FieldValTrim!UF)
+		F.ODBC.Con!rstA.MoveNext
+		F.Intrinsic.Control.Loop
+	F.ODBC.Con!rstA.Close
+	
+	F.ODBC.Connection!Con.OpenRecordsetRO("rstA","select distinct USER_FIELD_46 as UF from ATG_OE_USER_FIELDS where USER_FIELD_46 <> '' order by USER_FIELD_46")
+		F.Intrinsic.Control.DoUntil(V.ODBC.Con!rstA.EOF,=,True)
+			Gui.Form1.dropdownlistAPPLBegin.AddItem(V.ODBC.Con!rstA.FieldValTrim!UF)
+			Gui.Form1.dropdownlistAPPLEnd.AddItem(V.ODBC.Con!rstA.FieldValTrim!UF)
+		F.ODBC.Con!rstA.MoveNext
+		F.Intrinsic.Control.Loop
+	F.ODBC.Con!rstA.Close
+	
+	F.ODBC.Connection!Con.OpenRecordsetRO("rstA","select distinct USER_FIELD_76 as UF from ATG_OE_USER_FIELDS where USER_FIELD_76 <> '' order by USER_FIELD_76")
+		F.Intrinsic.Control.DoUntil(V.ODBC.Con!rstA.EOF,=,True)
+			Gui.Form1.dropdownlistAPPLBegin.AddItem(V.ODBC.Con!rstA.FieldValTrim!UF)
+			Gui.Form1.dropdownlistAPPLEnd.AddItem(V.ODBC.Con!rstA.FieldValTrim!UF)
+		F.ODBC.Con!rstA.MoveNext
+		F.Intrinsic.Control.Loop
+	F.ODBC.Con!rstA.Close
+	
+	'add salespeople to dropdowns
+	F.ODBC.Connection!Con.OpenRecordsetRO("rstA","select distinct (SALESPERSON_CODE + ' -  ' + SALESPERSON) as SALESPERSON from V_SALESPEOPLE order by SALESPERSON_CODE")
+		F.Intrinsic.Control.DoUntil(V.ODBC.Con!rstA.EOF,=,True)
+			Gui.Form1.dropdownlistBegRep.AddItem(V.ODBC.Con!rstA.FieldValTrim!SALESPERSON)
+			Gui.Form1.dropdownlistEndRep.AddItem(V.ODBC.Con!rstA.FieldValTrim!SALESPERSON)
+			F.ODBC.Con!rstA.MoveNext
+		F.Intrinsic.Control.Loop
+	F.ODBC.Con!rstA.Close
+	
+	Gui.Form1..Show
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(errorhandler, "Sub", V.Ambient.CurrentSubroutine, "ErrNo", V.Ambient.ErrorNumber, "ErrDesc", V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+Program.Sub.Main.End
+
+program.sub.cmdok_click.start
+F.Intrinsic.Control.Try
+	F.Intrinsic.Control.BlockEvents
+	'be sure values are entered for each option
+	F.Intrinsic.Control.If(V.Screen.Form1!dropdownlistRptType.Text,=,"")
+		F.Intrinsic.UI.Msgbox("Report Type Not Selected")
+		F.Intrinsic.Control.UnBlockEvents
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.If(V.Screen.Form1!chkBUAll.Value,=,0)
+	F.Intrinsic.Control.andIf(V.Screen.Form1!dropdownlistBUFrm.Text,=,"")
+		F.Intrinsic.UI.Msgbox("Business Unit Range  Not Selected")
+		F.Intrinsic.Control.UnBlockEvents
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.If(V.Screen.Form1!chkAllReps.Value,=,0)
+	F.Intrinsic.Control.AndIf(V.Screen.Form1!dropdownlistBegRep.Text,=,"")
+		F.Intrinsic.UI.Msgbox("Salesperson Range Not Selected")
+		F.Intrinsic.Control.UnBlockEvents
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.If(V.Screen.Form1!chkALLCust.Value,=,0)
+	F.Intrinsic.Control.AndIf(V.Screen.Form1!txtCustFrm.Text,=,"")
+		F.Intrinsic.UI.Msgbox("Customer Range Not Selected")
+		F.Intrinsic.Control.UnBlockEvents
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.If(V.Screen.Form1!chkAllAppl.Value,=,0)
+	F.Intrinsic.Control.AndIf(V.Screen.Form1!dropdownlistAPPLBegin.Text,=,"")
+		F.Intrinsic.UI.Msgbox("Application Range Not Selected")
+		F.Intrinsic.Control.UnBlockEvents
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.If(V.Screen.Form1!dropdownlistRptType.Text,<>,"Open Order by Cutoff Date")
+	
+		F.Intrinsic.Control.If(V.Screen.Form1!chkopen.Value,=,0)
+		F.Intrinsic.Control.AndIf(V.Screen.Form1!chkClosed.Value,=,0)
+			F.Intrinsic.UI.Msgbox("Order Status Not Selected ")
+			F.Intrinsic.Control.UnBlockEvents
+			F.Intrinsic.Control.ExitSub
+		F.Intrinsic.Control.EndIf
+		
+	F.Intrinsic.Control.EndIf
+'	Gui.Form1.cmdOk.Enabled(false)
+	Gui.Form1..Visible(false)
+	F.Intrinsic.Control.UnBlockEvents
+	
+	'call appropriate sub based on which report option is selected
+	F.Intrinsic.Control.If(V.Screen.Form1!dropdownlistRptType.Text,=,"Sales Orders")
+		F.Intrinsic.Control.CallSub(Salesorder)
+	F.Intrinsic.Control.ElseIf(V.Screen.Form1!dropdownlistRptType.Text,=,"Bookings")
+		F.Intrinsic.Control.CallSub(Bookings)
+	F.Intrinsic.Control.ElseIf(V.Screen.Form1!dropdownlistRptType.Text,=,"Invoices")
+		F.Intrinsic.Control.CallSub(Invoice)
+	F.Intrinsic.Control.ElseIf(V.Screen.Form1!dropdownlistRptType.Text,=,"Packingslips")
+		F.Intrinsic.Control.CallSub(Packinglist)
+	F.Intrinsic.Control.ElseIf(V.Screen.Form1!dropdownlistRptType.Text,=,"Open Order by Cutoff Date")
+		F.Intrinsic.Control.CallSub(Sobycutoff)	
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.CallSub(Form1_unload)
+	
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(errorhandler, "Sub", V.Ambient.CurrentSubroutine, "ErrNo", V.Ambient.ErrorNumber, "ErrDesc", V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+program.sub.cmdok_click.End
+
+program.sub.form1_unload.start
+F.Intrinsic.Control.Try
+	'Close connection
+	F.ODBC.Connection!Con.Close
+	F.Intrinsic.Control.End
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.End
+
+F.Intrinsic.Control.EndTry
+program.sub.form1_unload.End
+
+program.sub.dropdownlistbufrm_change.start
+F.Intrinsic.Control.Try
+	
+	Gui.Form1.dropdownlistBUend.Text(V.Screen.Form1!dropdownlistBUFrm.Text)
+	
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(errorhandler, "Sub", V.Ambient.CurrentSubroutine, "ErrNo", V.Ambient.ErrorNumber, "ErrDesc", V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+program.sub.dropdownlistbufrm_change.End
+
+program.sub.dropdownlistapplbegin_change.start
+F.Intrinsic.Control.Try
+	
+	Gui.Form1.dropdownlistAPPLEnd.Text(V.Screen.Form1!dropdownlistAPPLBegin.Text)
+	
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(errorhandler, "Sub", V.Ambient.CurrentSubroutine, "ErrNo", V.Ambient.ErrorNumber, "ErrDesc", V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+program.sub.dropdownlistapplbegin_change.End
+
+program.sub.dropdownlistbegrep_change.start
+F.Intrinsic.Control.Try
+	
+	Gui.Form1.dropdownlistEndRep.Text(V.Screen.Form1!dropdownlistBegRep.Text)
+	
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(errorhandler, "Sub", V.Ambient.CurrentSubroutine, "ErrNo", V.Ambient.ErrorNumber, "ErrDesc", V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+program.sub.dropdownlistbegrep_change.End
+
+Program.Sub.PrintReport.Start
+F.Intrinsic.Control.Try
+	V.Local.sRptLoc.Declare(String)
+	V.Local.iRptid.Declare(Long)
+	V.Local.sParams.Declare(String)
+	V.Local.sValues.Declare(String)
+	V.Local.sStatus.Declare(String)
+	V.Local.sRptType.Declare(String)
+	V.Local.sBegDte.Declare(String)
+	V.Local.sEndDte.Declare(String)
+	V.Local.sBegBU.Declare(String)
+	V.Local.sEndBU.Declare(String)
+	V.Local.sBegAPP.Declare(String)
+	V.Local.sEndAPP.Declare(String)
+	V.Local.sBegRep.Declare(String)
+	V.Local.sEndRep.Declare(String)
+	V.Local.sBegCust.Declare(String)
+	V.Local.sEndCust.Declare(String)
+	V.Local.iret.Declare(Long)
+	
+	F.Global.BI.GetRunID(V.Global.iBIRunID)
+	F.Global.BI.StartLogging(V.Global.iBIRunID,0,0,0,V.GLobal.iBILogID)
+	
+	F.Intrinsic.Control.If(V.Screen.Form1!dropdownlistRptType.Text,=,"Sales Orders")
+		V.Local.sRptType.Set("O")
+	F.Intrinsic.Control.elseIf(V.Screen.Form1!dropdownlistRptType.Text,=,"Invoices")
+		V.Local.sRptType.Set("I")
+	F.Intrinsic.Control.elseIf(V.Screen.Form1!dropdownlistRptType.Text,=,"Packingslips")
+		V.Local.sRptType.Set("P")
+	F.Intrinsic.Control.elseIf(V.Screen.Form1!dropdownlistRptType.Text,=,"Quotations")
+		V.Local.sRptType.Set("Q")
+	F.Intrinsic.Control.elseIf(V.Screen.Form1!dropdownlistRptType.Text,=,"Bookings")
+		V.Local.sRptType.Set("B")
+	F.Intrinsic.Control.elseIf(V.Screen.Form1!dropdownlistRptType.Text,=,"Open Order by Cutoff Date")
+		V.Local.sRptType.Set("C")
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.If(V.Screen.Form1!chkopen.Value,=,1)
+	F.Intrinsic.Control.AndIf(V.Screen.Form1!chkClosed.Value,=,1)
+		V.Local.sStatus.Set("ALL")
+	F.Intrinsic.Control.Else
+		F.Intrinsic.Control.If(V.Screen.Form1!chkopen.Value,=,1)
+			V.Local.sStatus.Set("O")
+		F.Intrinsic.Control.ElseIf(V.Screen.Form1!chkClosed.Value,=,1)
+			V.Local.sStatus.Set("C")
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.If(V.Screen.Form1!chkAllAppl.Value,=,1)
+		V.Local.sBegAPP.Set("ALL")
+	F.Intrinsic.Control.Else
+		F.Intrinsic.String.Split(V.Screen.Form1!dropdownlistAPPLBegin.Text,"-",V.Local.sBegAPP)
+		F.Intrinsic.String.Split(V.Screen.Form1!dropdownlistAPPLEnd.Text,"-",V.Local.sEndAPP)
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.If(V.Screen.Form1!chkALLCust.Value,=,1)
+		V.Local.sBegCust.Set("ALL")
+	F.Intrinsic.Control.Else
+		V.Local.sBegCust.Set(V.Screen.Form1!txtCustFrm.Text)
+		V.Local.sEndCust.Set(V.Screen.Form1!txtCustThru.Text)
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.If(V.Screen.Form1!chkAllDates.Value,=,1)
+		V.Local.sBegDte.Set("ALL")
+	F.Intrinsic.Control.Else
+		V.Local.sBegDte.Set(V.Screen.Form1!datepickerFrm.Value)
+		V.Local.sEndDte.Set(V.Screen.Form1!datepickerThru.Value)
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.If(V.Screen.Form1!chkAllReps.Value,=,1)
+		V.Local.sBegRep.Set("ALL")
+	F.Intrinsic.Control.Else
+		V.Local.sBegRep.Set(V.Screen.Form1!dropdownlistBegRep.Text)
+		V.Local.sEndRep.Set(V.Screen.Form1!dropdownlistEndRep.Text)
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.If(V.Screen.Form1!chkBUAll.Value,=,1)
+		V.Local.sBegBU.Set("ALL")
+	F.Intrinsic.Control.Else
+		V.Local.sBegBU.Set(V.Screen.Form1!dropdownlistBUFrm.Text)
+		V.Local.sEndBU.Set(V.Screen.Form1!dropdownlistBUend.Text)
+	F.Intrinsic.Control.EndIf
+	
+	F.Global.BI.StopLogging(V.Global.iBILogID)
+
+	'Set Parameters and values
+	V.Local.sParams.Set("RPTTYPE*!*STATUS*!*BEGDATE*!*ENDDATE*!*BEGBU*!*ENDBU*!*BEGAPP*!*ENDAPP*!*BEGSP*!*ENDSP*!*BEGCUST*!*ENDCUST*!*TRMNL")
+	F.Intrinsic.String.Build("{0}*!*{1}*!*{2}*!*{3}*!*{4}*!*{5}*!*{6}*!*{7}*!*{8}*!*{9}*!*{10}*!*{11}*!*{12}",V.Local.sRptType,V.Local.sStatus.trim,V.Local.sBegDte.trim,V.Local.sEndDte.trim,V.Local.sBegBU.trim,V.Local.sEndBU.trim,V.Local.sBegAPP(0).trim,V.Local.sEndAPP(0).trim,V.Local.sBegRep.trim,V.Local.sEndRep.trim,V.Local.sBegCust.trim,V.Local.sEndCust.trim,V.Caller.Terminal,V.Local.sValues)	
+	F.Global.BI.RunReportPreProcessor(V.Global.iBIRunID,V.Global.iBILogID,V.Local.sParams,V.Local.sValues,"",-1,True,"",1,"",-1,"","",V.Local.iRet)
+	
+	F.Intrinsic.Control.CallSub(Form1_unload)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(errorhandler, "Sub", V.Ambient.CurrentSubroutine, "ErrNo", V.Ambient.ErrorNumber, "ErrDesc", V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+Program.Sub.PrintReport.End
+
+Program.Sub.SalesOrder.Start
+F.Intrinsic.Control.Try
+	V.Local.sSelX.Declare(String)
+	V.Local.sSel.Declare(String)
+	V.Local.sSelOpenOrder.Declare(String)
+	V.Local.sSelOrderHist.Declare(String)
+	V.Local.dBegdate.Declare(Date)
+	V.Local.dEndDate.Declare(Date)
+	V.Local.sBegSP.Declare(String)
+	V.Local.sEndSP.Declare(String)
+	V.Local.sBegCust.Declare(String)
+	V.Local.sEndCust.Declare(String)
+	V.Local.sBegAppl.Declare(String)
+	V.Local.sEndAppl.Declare(String)
+	V.Local.iFor.Declare(Long)
+	V.Local.iForChange.Declare(Long)
+	
+	F.Intrinsic.String.Split(V.Screen.Form1!dropdownlistBegRep.Text,"-",V.Local.sBegSP)
+	F.Intrinsic.String.Split(V.Screen.Form1!dropdownlistEndRep.Text,"-",V.Local.sEndSP)
+	
+	F.Intrinsic.String.Split(V.Screen.Form1!txtCustFrm.Text,"-",V.Local.sBegCust)
+	F.Intrinsic.String.Split(V.Screen.Form1!txtCustThru.Text,"-",V.Local.sEndCust)
+	
+	F.Intrinsic.String.Split(V.Screen.Form1!dropdownlistAPPLBegin.Text,"-",V.Local.sBegAppl)
+	F.Intrinsic.String.Split(V.Screen.Form1!dropdownlistAPPLEnd.Text,"-",V.Local.sEndAppl)
+	
+	F.Intrinsic.String.Build("delete from GCG_3496_BU_APPL_RPT where TRMNL='{0}' or rtrim(TRMNL)=''",V.Caller.Terminal,V.Local.sSelX)
+	F.ODBC.Connection!Con.Execute(V.Local.sSelX)
+	
+	'open
+	F.Intrinsic.Control.If(V.Screen.Form1!chkopen.Value,=,1)
+		F.Intrinsic.String.Build("select distinct '{0}' as TRMNL, V_ORDER_HEADER.ORDER_NO, ORDER_LINES.RECORD_NO,ORDER_LINES.PART, ORDER_LINES.DESCRIPTION, CAST(ORDER_LINES.QTY_ORDERED AS Float) AS QTY_ORDERED, V_ORDER_HEADER.CUSTOMER AS NAME,V_ORDER_HEADER.DATE_DUE_CNV AS DATE_DUE, V_ORDER_HEADER.DATE_ORDER_CNV AS DATE_ORDER, '' as APPLICATION, V_ORDER_HEADER.CODE_SORT, V_ORDER_HEADER.SALESPERSON, CAST(ORDER_LINES.EXTENSION AS Float) AS EXTENSION, CAST(ORDER_LINES.COST AS FLOAT) AS COST from V_ORDER_HEADER  inner join ORDER_LINES on V_ORDER_HEADER.ORDER_NO=ORDER_LINES.ORDER_NO ",V.Caller.Terminal,V.Local.sSel)
+			
+		F.Intrinsic.Control.If(V.Screen.Form1!chkAllAppl.Value,=,0)
+			F.Intrinsic.String.Build("{0} left outer join ATG_OE_USER_FIELDS on V_ORDER_HEADER.ORDER_NO=ATG_OE_USER_FIELDS.ORDER_NO",V.Local.sSel,V.Local.sSel)
+		F.Intrinsic.Control.EndIf
+			
+		F.Intrinsic.String.Build("{0} where ORDER_LINES.RECORD_TYPE='L' and ORDER_LINES.RECORD_NO <> '8000' and ORDER_LINES.LINE_TYPE <> 'P'  and V_ORDER_HEADER.RECORD_NO='  A'",V.Local.sSel,V.Local.sSel)
+		F.Intrinsic.String.Build("{0} and Order_Lines.GL_Account between  '40000' AND '40160.99'",V.Local.sSel,V.Local.sSel)
+		
+    	'Incorporating excluding the blanket orders into the queries so we don't have to loop through and delete them later.
+		F.Intrinsic.String.Build("{0} AND (Order_lines.Order_No + Order_Lines.record_No) NOT IN (select distinct ORDER_LINES.ORDER_NO + ORDER_LINES.RECORD_NO from ORDER_LINES where ORDER_LINES.BLANKET_NO <> '' and ORDER_LINES.Qty_Shipped <> 0)",V.Local.sSel,V.Local.sSel)
+		F.Intrinsic.String.Build("{0} AND (Order_Lines.Order_No + Order_Lines.Record_No) NOT IN (select distinct ORDER_HIST_LINE.ORDER_NO + ORDER_HIST_LINE.ORDER_LINE from ORDER_HIST_LINE where ORDER_HIST_LINE.BLANKET_NO <> '')",V.Local.sSel,V.Local.sSel)
+		
+		'appl range
+		F.Intrinsic.Control.If(V.Screen.Form1!chkAllAppl.Value,=,0)
+			F.Intrinsic.String.Build("{0} and (left(USER_FIELD_16,3) between '{1}' and '{2}' or left(USER_FIELD_31,3) between '{1}' and '{2}' or left(USER_FIELD_46,3) between '{1}' and '{2}' or left(USER_FIELD_76,3) between '{1}' and '{2}')",V.Local.sSel,V.Local.sBegAppl.Trim,V.Local.sEndAppl.Trim,V.Local.sSel)
+		F.Intrinsic.Control.EndIf
+		
+		'date range
+		F.Intrinsic.Control.If(V.Screen.Form1!chkAllDates.Value,=,0)
+			V.Local.dBegdate.Set(V.Screen.Form1!datepickerFrm.Value)
+			V.Local.dEndDate.Set(V.Screen.Form1!datepickerThru.Value)
+			
+			F.Intrinsic.String.Build("{0} and V_ORDER_HEADER.DATE_ORDER_CNV between '{1}' and '{2}'",V.Local.sSel,V.Local.dBegdate.PervasiveDate,V.Local.dEndDate.PervasiveDate,V.Local.sSel)
+		F.Intrinsic.Control.EndIf
+		
+		'rep range
+		F.Intrinsic.Control.If(V.Screen.Form1!chkAllReps.Value,=,0)
+			F.Intrinsic.String.Build("{0} and V_ORDER_HEADER.SALESPERSON between '{1}' and '{2}'",V.Local.sSel,V.Local.sBegSP(0).Trim,V.Local.sEndSP(0).Trim,V.Local.sSel)
+		F.Intrinsic.Control.EndIf
+		
+		'cust range
+		F.Intrinsic.Control.If(V.Screen.Form1!chkALLCust.Value,=,0)
+			F.Intrinsic.String.Build("{0} and V_ORDER_HEADER.CUSTOMER between '{1}' and '{2}'",V.Local.sSel,V.Local.sBegCust(0).Trim,V.Local.sEndCust(0).Trim,V.Local.sSel)
+		F.Intrinsic.Control.EndIf
+		
+		'BU range
+		F.Intrinsic.Control.If(V.Screen.Form1!chkBUAll.Value,=,0)
+			F.Intrinsic.String.Build("{0} and V_ORDER_HEADER.CODE_SORT between '{1}' and '{2}'",V.Local.sSel,V.Screen.Form1!dropdownlistBUFrm.Text,V.Screen.Form1!dropdownlistBUend.Text,V.Local.sSel)
+		F.Intrinsic.Control.EndIf
+		
+		'Save the records to a temp datatable and then merge that into existing Order DT
+		F.Data.DataTable.CreateFromSQL("Temp","con",V.Local.sSel)
+		
+		F.Intrinsic.Control.If(v.DataTable.Temp.RowCount,>,0)
+			F.Data.DataTable.Merge("Temp","Order",True,4)
+		F.Intrinsic.Control.EndIf
+		
+		F.Data.DataTable.Close("Temp")
+	
+		'if not all dates
+		F.Intrinsic.Control.If(V.Screen.Form1!chkAllDates.Value,=,0)
+			F.Intrinsic.String.Build("select distinct '{0}' as TRMNL,  ORDER_HIST_HEAD.ORDER_NO, ORDER_HIST_LINE.PART,ORDER_HIST_LINE.DESCRIPTION, CAST(ORDER_HIST_LINE.QTY_ORDERED AS FLOAT) AS QTY_ORDERED, ORDER_HIST_HEAD.CUSTOMER AS NAME, ORDER_HIST_HEAD.DATE_ORDER_DUE AS DATE_DUE,ORDER_HIST_HEAD.DATE_ORDER,  '' as APPLICATION, Order_Hist_Head.CODE_SORT, Order_Hist_line.SALESPERSON, CAST(ORDER_HIST_LINE.EXTENSION AS FLOAT) AS EXTENSION, CAST(ORDER_HIST_LINE.COST AS FLOAT) AS COST,ORDER_HIST_LINE.ORDER_LINE AS RECORD_NO from ORDER_HIST_HEAD ",V.Caller.Terminal,V.Local.sSel)
+			F.Intrinsic.String.Build("{0} inner join ORDER_HIST_LINE on ORDER_HIST_HEAD.ORDER_NO = ORDER_HIST_LINE.ORDER_NO  and Order_hist_Head.Order_Suffix=Order_Hist_line.Order_Suffix ",V.Local.sSel,V.Local.sSel)
+				
+			F.Intrinsic.Control.If(V.Screen.Form1!chkAllAppl.Value,=,0)
+				F.Intrinsic.String.Build("{0} left outer join ATG_OE_USER_FIELDS on ORDER_HIST_HEAD.ORDER_NO=ATG_OE_USER_FIELDS.ORDER_NO",V.Local.sSel,V.Local.sSel)
+			F.Intrinsic.Control.EndIf
+			
+			F.Intrinsic.String.Build("{0} where ORDER_HIST_LINE.ORDER_LINE <> '8000' and ORDER_HIST_LINE.LINE_TYPE <> 'P'",V.Local.sSel,V.Local.sSel)
+			F.Intrinsic.String.Build("{0} and ORDER_HIST_LINE.GL_Account between  '40000' AND '40160.99' ",V.Local.sSel,V.Local.sSel)
+			
+			'Incorporating excluding the blanket orders into the queries so we don't have to loop through and delete them later.
+			F.Intrinsic.String.Build("{0} AND (Order_Hist_line.Order_No + Order_Hist_Line.Order_Line) NOT IN (select distinct ORDER_LINES.ORDER_NO + ORDER_LINES.RECORD_NO from ORDER_LINES where ORDER_LINES.BLANKET_NO <> '' and ORDER_LINES.Qty_Shipped <> 0)",V.Local.sSel,V.Local.sSel)
+			F.Intrinsic.String.Build("{0} AND (Order_Hist_Line.Order_No + Order_Hist_Line.Order_Line) NOT IN (select distinct ORDER_HIST_LINE.ORDER_NO + ORDER_HIST_LINE.ORDER_LINE from ORDER_HIST_LINE where ORDER_HIST_LINE.BLANKET_NO <> '')",V.Local.sSel,V.Local.sSel)
+	
+			'date range
+			V.Local.dBegdate.Set(V.Screen.Form1!datepickerFrm.Value)
+			V.Local.dEndDate.Set(V.Screen.Form1!datepickerThru.Value)
+			F.Intrinsic.String.Build("{0} and ORDER_HIST_HEAD.DATE_ORDER between '{1}' and '{2}'",V.Local.sSel,V.Local.dBegdate.PervasiveDate,V.Local.dEndDate.PervasiveDate,V.Local.sSel)
+			'open means ordered , but not shipped
+			F.Intrinsic.String.Build("{0} and ORDER_HIST_Line.Date_Shipped > '{1}'",V.Local.sSel,V.Local.dEndDate.PervasiveDate,V.Local.sSel)
+	
+			'rep range
+			F.Intrinsic.Control.If(V.Screen.Form1!chkAllReps.Value,=,0)
+				F.Intrinsic.String.Build("{0} and Order_Hist_Line.SALESPERSON between '{1}' and '{2}'",V.Local.sSel,V.Local.sBegSP(0).Trim,V.Local.sEndSP(0).Trim,V.Local.sSel)
+			F.Intrinsic.Control.EndIf
+			
+			'cust range
+			F.Intrinsic.Control.If(V.Screen.Form1!chkALLCust.Value,=,0)
+				F.Intrinsic.String.Build("{0} and ORDER_HIST_HEAD.CUSTOMER between '{1}' and '{2}'",V.Local.sSel,V.Local.sBegCust(0).Trim,V.Local.sEndCust(0).Trim,V.Local.sSel)
+			F.Intrinsic.Control.EndIf
+			
+			'BU range
+			F.Intrinsic.Control.If(V.Screen.Form1!chkBUAll.Value,=,0)
+				F.Intrinsic.String.Build("{0} and ORDER_HIST_HEAD.CODE_SORT between '{1}' and '{2}'",V.Local.sSel,V.Screen.Form1!dropdownlistBUFrm.Text,V.Screen.Form1!dropdownlistBUend.Text,V.Local.sSel)
+			F.Intrinsic.Control.EndIf
+			
+			'appl range
+			F.Intrinsic.Control.If(V.Screen.Form1!chkAllAppl.Value,=,0)
+				F.Intrinsic.String.Build("{0} and (left(USER_FIELD_16,3) between '{1}' and '{2}' or left(USER_FIELD_31,3) between '{1}' and '{2}' or left(USER_FIELD_46,3) between '{1}' and '{2}' or left(USER_FIELD_76,3) between '{1}' and '{2}')",V.Local.sSel,V.Local.sBegAppl.Trim,V.Local.sEndAppl.Trim,V.Local.sSel)
+			F.Intrinsic.Control.EndIf
+			
+			F.Data.DataTable.CreateFromSQL("Temp","con",V.Local.sSel)
+			
+			F.Intrinsic.Control.If(V.DataTable.Temp.RowCount,>,0)
+				F.Data.DataTable.Merge("Temp","Order",True,4)
+			F.Intrinsic.Control.EndIf
+			
+			F.Data.DataTable.Close("Temp")
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+	
+	'closed
+	F.Intrinsic.Control.If(V.Screen.Form1!chkClosed.Value,=,1)
+		F.Intrinsic.String.Build("select distinct '{0}' as TRMNL,  ORDER_HIST_HEAD.ORDER_NO, ORDER_HIST_LINE.PART,ORDER_HIST_LINE.DESCRIPTION, CAST(ORDER_HIST_LINE.QTY_ORDERED AS FLOAT) AS QTY_ORDERED, ORDER_HIST_HEAD.CUSTOMER AS NAME, ORDER_HIST_HEAD.DATE_ORDER_DUE AS DATE_DUE,ORDER_HIST_HEAD.DATE_ORDER,  '' as APPLICATION, ORDER_HIST_HEAD.CODE_SORT, ORDER_HIST_LINE.SALESPERSON, CAST(ORDER_HIST_LINE.EXTENSION AS FLOAT) AS EXTENSION, CAST(ORDER_HIST_LINE.COST AS FLOAT) AS COST,ORDER_HIST_LINE.ORDER_LINE AS RECORD_NO from ORDER_HIST_HEAD ",V.Caller.Terminal,V.Local.sSel)
+		F.Intrinsic.String.Build("{0} inner join ORDER_HIST_LINE on ORDER_HIST_HEAD.ORDER_NO = ORDER_HIST_LINE.ORDER_NO  and Order_hist_Head.Order_Suffix=Order_Hist_line.Order_Suffix ",V.Local.sSel,V.Local.sSel)
+		
+		F.Intrinsic.Control.If(V.Screen.Form1!chkAllAppl.Value,=,0)
+			F.Intrinsic.String.Build("{0} left outer join ATG_OE_USER_FIELDS on ORDER_HIST_HEAD.ORDER_NO=ATG_OE_USER_FIELDS.ORDER_NO ",V.Local.sSel,V.Local.sSel)
+		F.Intrinsic.Control.EndIf
+			
+		F.Intrinsic.String.Build("{0} where ORDER_HIST_LINE.ORDER_LINE<>'8000' and ORDER_HIST_LINE.LINE_TYPE <> 'P'",V.Local.sSel,V.Local.sSel)
+		F.Intrinsic.String.Build("{0} and ORDER_HIST_LINE.GL_Account between  '40000' AND '40160.99' ",V.Local.sSel,V.Local.sSel)
+	
+		'date range
+		F.Intrinsic.Control.If(V.Screen.Form1!chkAllDates.Value,=,0)
+			V.Local.dBegdate.Set(V.Screen.Form1!datepickerFrm.Value)
+			V.Local.dEndDate.Set(V.Screen.Form1!datepickerThru.Value)
+			F.Intrinsic.String.Build("{0} and ORDER_HIST_HEAD.DATE_ORDER between '{1}' and '{2}'",V.Local.sSel,V.Local.dBegdate.PervasiveDate,V.Local.dEndDate.PervasiveDate,V.Local.sSel)
+		F.Intrinsic.Control.EndIf
+	
+		'Incorporating excluding the blanket orders into the queries so we don't have to loop through and delete them later.
+		F.Intrinsic.String.Build("{0} AND (Order_Hist_line.Order_No + Order_Hist_Line.Order_Line) NOT IN (select distinct ORDER_LINES.ORDER_NO + ORDER_LINES.RECORD_NO from ORDER_LINES where ORDER_LINES.BLANKET_NO <> '' and ORDER_LINES.Qty_Shipped <> 0)",V.Local.sSel,V.Local.sSel)
+		F.Intrinsic.String.Build("{0} AND (Order_Hist_Line.Order_No + Order_Hist_Line.Order_Line) NOT IN (select distinct ORDER_HIST_LINE.ORDER_NO + ORDER_HIST_LINE.ORDER_LINE from ORDER_HIST_LINE where ORDER_HIST_LINE.BLANKET_NO <> '')",V.Local.sSel,V.Local.sSel)
+	
+		'rep range
+		F.Intrinsic.Control.If(V.Screen.Form1!chkAllReps.Value,=,0)
+			F.Intrinsic.String.Build("{0} and Order_Hist_Line.SALESPERSON between '{1}' and '{2}'",V.Local.sSel,V.Local.sBegSP(0).Trim,V.Local.sEndSP(0).Trim,V.Local.sSel)
+		F.Intrinsic.Control.EndIf
+		
+		'cust range
+		F.Intrinsic.Control.If(V.Screen.Form1!chkALLCust.Value,=,0)
+			F.Intrinsic.String.Build("{0} and ORDER_HIST_HEAD.CUSTOMER between '{1}' and '{2}'",V.Local.sSel,V.Local.sBegCust(0).Trim,V.Local.sEndCust(0).Trim,V.Local.sSel)
+		F.Intrinsic.Control.EndIf
+		
+		'BU range
+		F.Intrinsic.Control.If(V.Screen.Form1!chkBUAll.Value,=,0)
+			F.Intrinsic.String.Build("{0} and ORDER_HIST_HEAD.CODE_SORT between '{1}' and '{2}'",V.Local.sSel,V.Screen.Form1!dropdownlistBUFrm.Text,V.Screen.Form1!dropdownlistBUend.Text,V.Local.sSel)
+		F.Intrinsic.Control.EndIf
+		
+		'appl range
+		F.Intrinsic.Control.If(V.Screen.Form1!chkAllAppl.Value,=,0)
+			F.Intrinsic.String.Build("{0} and (left(USER_FIELD_16,3) between '{1}' and '{2}' or left(USER_FIELD_31,3) between '{1}' and '{2}' or left(USER_FIELD_46,3) between '{1}' and '{2}' or left(USER_FIELD_76,3) between '{1}' and '{2}')",V.Local.sSel,V.Local.sBegAppl.Trim,V.Local.sEndAppl.Trim,V.Local.sSel)
+		F.Intrinsic.Control.EndIf
+	
+		F.Data.DataTable.CreateFromSQL("Temp","con",V.Local.sSel)
+		
+		F.Intrinsic.Control.If(V.DataTable.Temp.RowCount,>,0)
+			F.Data.DataTable.Merge("Temp","Order",True,4)
+		F.Intrinsic.Control.EndIf
+			
+		F.Data.DataTable.Close("Temp")
+	F.Intrinsic.Control.EndIf	
+	
+
+	F.Data.DataTable.AcceptChanges("Order")
+	F.Data.DataTable.SaveToDB("Order","con","GCG_3496_BU_APPL_RPT","",128)
+	
+	v.Local.iCnt.Declare
+	v.Local.sCompDate.Declare
+	v.Local.sSQL.Declare
+	f.Intrinsic.Control.For(v.Local.iCnt,0,v.DataTable.Order.RowCount--,1)
+		F.Intrinsic.String.Build("Select USER_1 from V_ORDER_HEADER where ORDER_NO = '{0}'",v.DataTable.Order(v.Local.iCnt).ORDER_NO!FieldValTrim,v.Local.sSQL)
+		f.ODBC.Connection!con.executeandreturn(v.Local.sSQL,v.Local.sCompDate)
+		f.Intrinsic.String.Build("Update GCG_3496_BU_APPL_RPT set DATE_COMPLETION = '{0}' where ORDER_NO = '{1}' and TRMNL = '{2}'",v.Local.sCompDate,v.DataTable.Order(v.Local.iCnt).ORDER_NO!FieldValTrim,v.Caller.Terminal,v.Local.sSQL)
+		f.ODBC.Connection!con.execute(v.Local.sSQL)
+	f.Intrinsic.Control.Next(v.Local.iCnt)
+	
+	F.Intrinsic.Control.CallSub(Printreport)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(errorhandler, "Sub", V.Ambient.CurrentSubroutine, "ErrNo", V.Ambient.ErrorNumber, "ErrDesc", V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+Program.Sub.SalesOrder.End
+
+Program.Sub.Invoice.Start
+F.Intrinsic.Control.Try
+	V.Local.sSelX.Declare(String)
+	V.Local.sSel.Declare(String)
+	V.Local.sSelOpenOrder.Declare(String)
+	V.Local.sSelOrderHist.Declare(String)
+	V.Local.dBegdate.Declare(Date)
+	V.Local.dEndDate.Declare(Date)
+	V.Local.sBegSP.Declare(String)
+	V.Local.sEndSP.Declare(String)
+	V.Local.sBegCust.Declare(String)
+	V.Local.sEndCust.Declare(String)
+	V.Local.sBegAppl.Declare(String)
+	V.Local.sEndAppl.Declare(String)
+	V.Local.iFor.Declare(Long)
+	V.Local.sTemp.Declare(String)
+	
+	F.Intrinsic.String.Split(V.Screen.Form1!dropdownlistBegRep.Text,"-",V.Local.sBegSP)
+	F.Intrinsic.String.Split(V.Screen.Form1!dropdownlistEndRep.Text,"-",V.Local.sEndSP)
+	
+	F.Intrinsic.String.Split(V.Screen.Form1!txtCustFrm.Text,"-",V.Local.sBegCust)
+	F.Intrinsic.String.Split(V.Screen.Form1!txtCustThru.Text,"-",V.Local.sEndCust)
+	
+	F.Intrinsic.String.Split(V.Screen.Form1!dropdownlistAPPLBegin.Text,"-",V.Local.sBegAppl)
+	F.Intrinsic.String.Split(V.Screen.Form1!dropdownlistAPPLEnd.Text,"-",V.Local.sEndAppl)
+	
+	F.Intrinsic.String.Build("delete from GCG_3496_BU_APPL_RPT where TRMNL='{0}' or rtrim(TRMNL)=''",V.Caller.Terminal,V.Local.sSelX)
+	F.ODBC.Connection!Con.Execute(V.Local.sSelX)
+	
+	'closed line data
+	F.Intrinsic.String.Build("select  '{0}' as TRMNL,ORDER_NO,ORDER_LINE as RECORD_NO,PART,DESCRIPTION,CAST(QTY_ORDERED AS FLOAT) As QTY_ORDERED,CUSTOMER AS NAME,DATE_DUE,Date_Order,SALESPERSON,CAST(EXTENSION AS FLOAT) AS EXTENSION,CAST(COST AS FLOAT) AS COST, '' As CODE_SORT from V_ORDER_HIST_LINE",V.Caller.Terminal,V.Local.sSel)
+	'change gl accounts per Dan 3/5/2012
+	F.Intrinsic.String.Build("{0} where ORDER_LINE<>'8000' and   LINE_TYPE<>'P' and GL_ACCOUNT BETWEEN '40000' AND '40160.99' ",V.Local.sSel,V.Local.sSel)
+		
+	F.Intrinsic.Control.If(V.Screen.Form1!chkAllDates.Value,=,0)
+		V.Local.dBegdate.Set(V.Screen.Form1!datepickerFrm.Value)
+		V.Local.dEndDate.Set(V.Screen.Form1!datepickerThru.Value)
+		F.Intrinsic.String.Build("{0} and DATE_INVOICE between '{1}' and '{2}' and ORDER_LINE<>'8000' and  LINE_TYPE <> 'P' ",V.Local.sSel,V.Local.dBegdate.PervasiveDate,V.Local.dEndDate.PervasiveDate,V.Local.sSel)
+	F.Intrinsic.Control.EndIf
+	
+	'rep range
+	F.Intrinsic.Control.If(V.Screen.Form1!chkAllReps.Value,=,0)
+		F.Intrinsic.String.Build("{0} and SALESPERSON between '{1}' and '{2}'",V.Local.sSel,V.Local.sBegSP(0).Trim,V.Local.sEndSP(0).Trim,V.Local.sSel)
+	F.Intrinsic.Control.EndIf
+	
+	'cust range
+	F.Intrinsic.Control.If(V.Screen.Form1!chkALLCust.Value,=,0)
+			F.Intrinsic.String.Build("{0} and CUSTOMER between '{1}' and '{2}'",V.Local.sSel,V.Local.sBegCust(0).Trim,V.Local.sEndCust(0).Trim,V.Local.sSel)
+	F.Intrinsic.Control.EndIf
+	
+	F.Data.DataTable.CreateFromSQL("temp","con",V.Local.sSel)
+	
+	F.Intrinsic.Control.If(V.DataTable.temp.RowCount,>,0)
+		F.Data.DataTable.Merge("temp","Order",True,4)
+	F.Intrinsic.Control.EndIf
+	
+	F.Data.DataTable.Close("temp")
+	
+	'closed header data
+	V.Local.sSel.Set("select distinct ORDER_HIST_HEAD.ORDER_NO,ORDER_HIST_HEAD.CODE_SORT from ORDER_HIST_HEAD")
+	F.Intrinsic.String.Build("{0} left outer join ATG_OE_USER_FIELDS on ORDER_HIST_HEAD.ORDER_NO=ATG_OE_USER_FIELDS.ORDER_NO ",V.Local.sSel,V.Local.sSel)
+	'BU range
+	F.Intrinsic.String.Build("{0} where ({1}=1 or ORDER_HIST_HEAD.CODE_SORT between '{2}' and '{3}')",V.Local.sSel,V.Screen.Form1!chkBUAll.Value,V.Screen.Form1!dropdownlistBUFrm.Text,V.Screen.Form1!dropdownlistBUend.Text,V.Local.sSel)
+	'appl range
+	F.Intrinsic.String.Build("{0} and ({1}=1 or (left(USER_FIELD_16,3) between '{2}' and '{3}' or left(USER_FIELD_31,3) between '{2}' and '{3}' or left(USER_FIELD_46,3) between '{2}' and '{3}'or left(USER_FIELD_76,3) between '{2}' and '{3}'))",V.Local.sSel,V.Screen.Form1!chkAllAppl.Value,V.Local.sBegAppl.Trim,V.Local.sEndAppl.Trim,V.Local.sSel)
+
+	F.Data.Dictionary.CreateFromSQL("temp","con",V.Local.sSel)
+	'Set default return to does not exist so that we can delete the row from the table.
+	F.Data.Dictionary.SetDefaultReturn("temp","DNE")
+	
+	F.Intrinsic.Control.For(V.Local.iFor,V.DataTable.Order.RowCount--,0,-1)
+		V.Local.sTemp.Set(V.Dictionary.Temp![V.DataTable.Order(V.Local.iFor).Order_No!FieldVal])
+		
+		F.Intrinsic.Control.If(V.Local.sTemp,=,"DNE")
+			F.Data.DataTable.DeleteRow("Order",V.Local.iFor)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.Next(V.Local.iFor)	
+	
+	'Accept changes and fill the datatable from dictionary to update Code Sort.
+	F.Data.DataTable.AcceptChanges("Order")
+	F.Data.DataTable.FillFromDictionary("Order","temp","Order_No","Code_Sort")
+	F.Data.DataTable.AcceptChanges("Order")
+	F.Data.Dictionary.Close("temp")
+	
+	F.Data.DataTable.SaveToDB("Order","con","GCG_3496_BU_APPL_RPT","",128)
+	
+	v.Local.iCnt.Declare
+	v.Local.sCompDate.Declare
+	v.Local.sSQL.Declare
+	f.Intrinsic.Control.For(v.Local.iCnt,0,v.DataTable.Order.RowCount--,1)
+		F.Intrinsic.String.Build("Select USER_1 from V_ORDER_HEADER where ORDER_NO = '{0}'",v.DataTable.Order(v.Local.iCnt).ORDER_NO!FieldValTrim,v.Local.sSQL)
+		f.ODBC.Connection!con.executeandreturn(v.Local.sSQL,v.Local.sCompDate)
+		f.Intrinsic.String.Build("Update GCG_3496_BU_APPL_RPT set DATE_COMPLETION = '{0}' where ORDER_NO = '{1}' and TRMNL = '{2}'",v.Local.sCompDate,v.DataTable.Order(v.Local.iCnt).ORDER_NO!FieldValTrim,v.Caller.Terminal,v.Local.sSQL)
+		f.ODBC.Connection!con.execute(v.Local.sSQL)
+	f.Intrinsic.Control.Next(v.Local.iCnt)
+	
+	F.Intrinsic.Control.CallSub(Printreport)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(errorhandler, "Sub", V.Ambient.CurrentSubroutine, "ErrNo", V.Ambient.ErrorNumber, "ErrDesc", V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+Program.Sub.Invoice.End
+
+Program.Sub.Quote.Start
+F.Intrinsic.Control.Try
+
+	V.Local.sSelX.Declare(String)
+	V.Local.sSel.Declare(String)
+	V.Local.sSelOpenOrder.Declare(String)
+	V.Local.sSelOrderHist.Declare(String)
+	V.Local.sBegdate.Declare(String)
+	V.Local.sEndDate.Declare(String)
+	V.Local.sBegSP.Declare(String)
+	V.Local.sEndSP.Declare(String)
+	V.Local.sBegCust.Declare(String)
+	V.Local.sEndCust.Declare(String)
+	V.Local.sBegAppl.Declare(String)
+	V.Local.sEndAppl.Declare(String)
+	V.Local.iFor.Declare(Long)
+	
+	F.Intrinsic.String.Split(V.Screen.Form1!dropdownlistBegRep.Text,"-",V.Local.sBegSP)
+	F.Intrinsic.String.Split(V.Screen.Form1!dropdownlistEndRep.Text,"-",V.Local.sEndSP)
+	
+	F.Intrinsic.String.Split(V.Screen.Form1!txtCustFrm.Text,"-",V.Local.sBegCust)
+	F.Intrinsic.String.Split(V.Screen.Form1!txtCustThru.Text,"-",V.Local.sEndCust)
+	
+	F.Intrinsic.String.Split(V.Screen.Form1!dropdownlistAPPLBegin.Text,"-",V.Local.sBegAppl)
+	F.Intrinsic.String.Split(V.Screen.Form1!dropdownlistAPPLEnd.Text,"-",V.Local.sEndAppl)
+	
+	F.Intrinsic.String.Build("delete from GCG_3496_BU_APPL_RPT where TRMNL='{0}' or rtrim(TRMNL)=''",V.Caller.Terminal,V.Local.sSelX)
+	F.ODBC.Connection!Con.Execute(V.Local.sSelX)	
+	
+	'open
+	F.Intrinsic.Control.If(V.Screen.Form1!chkopen.Value,=,1)
+		F.Intrinsic.String.Build("select distinct '{0}' as TRMNL, V_QUOTE_HEADER.QUOTE_NO as ORDER_NO,V_QUOTE_LINES.RECORD_NO, V_QUOTE_LINES.PART, V_QUOTE_LINES.DESCRIPTION, CAST(V_QUOTE_LINES.QTY_QUOTED AS FLOAT) as QTY_ORDERED,CAST(V_QUOTE_LINES.EXTENSION AS FLOAT) AS EXTENSION, CAST(V_QUOTE_LINES.COST AS FLOAT) AS COST,  V_QUOTE_HEADER.CUSTOMER as NAME,   V_QUOTE_HEADER.DATE_DUE_CNV, V_QUOTE_HEADER.DATE_QUOTE_CNV, '' as APPLICATION,  V_QUOTE_HEADER.SALESPERSON,V_QUOTE_HEADER.CODE_SORT from  V_QUOTE_HEADER  ",V.Caller.Terminal,V.Local.sSel)
+		F.Intrinsic.String.Build("{0} inner join V_QUOTE_LINES on  V_QUOTE_HEADER.QUOTE_NO= V_QUOTE_LINES.QUOTE_NO",V.Local.sSel,V.Local.sSel)
+		
+		F.Intrinsic.Control.If(V.Screen.Form1!chkAllAppl.Value,=,0)
+			F.Intrinsic.String.Build("{0} left outer join ATG_OE_USER_FIELDS on V_QUOTE_HEADER.QUOTE_NO=ATG_OE_USER_FIELDS.ORDER_NO ",V.Local.sSel,V.Local.sSel)
+		F.Intrinsic.Control.EndIf
+		
+		F.Intrinsic.String.Build("{0} where V_QUOTE_HEADER.RECORD_TYPE='A' and V_QUOTE_LINES.RECORD_NO > '0000' ",V.Local.sSel,V.Local.sSel)
+	
+		'appl range
+		F.Intrinsic.Control.If(V.Screen.Form1!chkAllAppl.Value,=,0)
+			F.Intrinsic.String.Build("{0} and (left(USER_FIELD_16,3) between '{1}' and '{2}' or left(USER_FIELD_31,3) between '{1}' and '{2}' or left(USER_FIELD_46,3) between '{1}' and '{2}'or left(USER_FIELD_76,3) between '{1}' and '{2}')",V.Local.sSel,V.Local.sBegAppl.Trim,V.Local.sEndAppl.Trim,V.Local.sSel)
+		F.Intrinsic.Control.EndIf
+		
+		'date range
+		F.Intrinsic.Control.If(V.Screen.Form1!chkAllDates.Value,=,0)
+			F.Intrinsic.String.Format(V.Screen.Form1!datepickerFrm.Value,"yyyymmdd",V.Local.sBegdate)
+			F.Intrinsic.String.Format(V.Screen.Form1!datepickerThru.Value,"yyyymmdd",V.Local.sEndDate)
+			
+			F.Intrinsic.String.Build("{0} and V_QUOTE_HEADER.DATE_QUOTE_CNV between '{1}' AND '{2}'",V.Local.sSel,V.Local.sBegdate,V.Local.sEndDate,V.Local.sSel)
+		F.Intrinsic.Control.EndIf
+		
+		'rep range
+		F.Intrinsic.Control.If(V.Screen.Form1!chkAllReps.Value,=,0)
+			F.Intrinsic.String.Build("{0} and V_QUOTE_HEADER.SALESPERSON between '{1}' AND '{2}'",V.Local.sSel,V.Local.sBegSP(0).Trim,V.Local.sEndSP(0).Trim,V.Local.sSel)
+		F.Intrinsic.Control.EndIf
+		
+		'cust range
+		F.Intrinsic.Control.If(V.Screen.Form1!chkALLCust.Value,=,0)
+			F.Intrinsic.String.Build("{0} and V_QUOTE_HEADER.CUSTOMER between '{1}' and '{2}'",V.Local.sSel,V.Local.sBegCust(0).Trim,V.Local.sEndCust(0).Trim,V.Local.sSel)
+		F.Intrinsic.Control.EndIf
+		
+		'BU range
+		F.Intrinsic.Control.If(V.Screen.Form1!chkBUAll.Value,=,0)
+			F.Intrinsic.String.Build("{0} and V_QUOTE_HEADER.CODE_SORT between '{1}' and '{2}'",V.Local.sSel,V.Screen.Form1!dropdownlistBUFrm.Text,V.Screen.Form1!dropdownlistBUend.Text,V.Local.sSel)
+		F.Intrinsic.Control.EndIf
+	
+		F.Data.DataTable.CreateFromSQL("temp","con",V.Local.sSel)
+		
+		F.Intrinsic.Control.If(V.DataTable.temp.RowCount,>,0)
+			F.Data.DataTable.Merge("temp","Order",True,4)
+		F.Intrinsic.Control.EndIf
+		
+		F.Data.DataTable.Close("temp")
+	
+	F.Intrinsic.Control.EndIf
+	
+	'closed
+	F.Intrinsic.Control.If(V.Screen.Form1!chkClosed.Value,=,1)
+		F.Intrinsic.String.Build("select distinct '{0}' as TRMNL, V_QUOTE_HEADER.QUOTE_NO, QUOTE_LINES.PART,  QUOTE_LINES.DESCRIPTION,  CAST(QUOTE_LINES.QTY_QUOTED AS FLOAT) AS QTY_QUOTED,  V_QUOTE_HEADER.CUSTOMER as NAME,   V_QUOTE_HEADER.DATE_DUE_CNV as DATE_DUE, V_QUOTE_HEADER.DATE_QUOTE_CNV as DATE_ORDER, '' as APPLICATION, ORDER_HIST_HEAD.CODE_SORT,  V_QUOTE_HEADER.SALESPERSON, Cast(EXTENSION AS FLOAT) AS EXTENSION, CAST(COST AS FLOAT) AS COST from  V_QUOTE_HEADER ",V.Caller.Terminal,V.Local.sSel)
+		F.Intrinsic.String.Build("{0} inner join QUOTE_LINES on  V_QUOTE_HEADER.QUOTE_NO= QUOTE_LINES.QUOTE_NO",V.Local.sSel,V.Local.sSel)
+		F.Intrinsic.String.Build("{0} inner join ORDER_HIST_HEAD on V_QUOTE_HEADER.QUOTE_NO=ORDER_HIST_HEAD.QUOTE",V.Local.sSel,V.Local.sSel)
+		
+		F.Intrinsic.Control.If(V.Screen.Form1!chkAllAppl.Value,=,0)
+			F.Intrinsic.String.Build("{0} left outer join ATG_OE_USER_FIELDS on ORDER_HEADER.ORDER_NO=ATG_OE_USER_FIELDS.ORDER_NO ",V.Local.sSel,V.Local.sSel)
+		F.Intrinsic.Control.EndIf
+			
+		F.Intrinsic.String.Build("{0} where V_QUOTE_HEADER.RECORD_TYPE='A' and QUOTE_LINES.RECORD_NO > '0000' ",V.Local.sSel,V.Local.sSel)
+	
+		'appl range
+		F.Intrinsic.Control.If(V.Screen.Form1!chkAllAppl.Value,=,0)
+			F.Intrinsic.String.Build("{0} and (left(USER_FIELD_16,3) between '{1}' and '{2}' or left(USER_FIELD_31,3) between '{1}' and '{2}' or left(USER_FIELD_46,3) between '{1}' and '{2}' or left(USER_FIELD_76,3) between '{1}' and '{2}')",V.Local.sSel,V.Local.sBegAppl.Trim,V.Local.sEndAppl.Trim,V.Local.sSel)
+		F.Intrinsic.Control.EndIf
+			
+		'date range
+		F.Intrinsic.Control.If(V.Screen.Form1!chkAllDates.Value,=,0)
+			F.Intrinsic.String.Format(V.Screen.Form1!datepickerFrm.Value,"yyyymmdd",V.Local.sBegdate)
+			F.Intrinsic.String.Format(V.Screen.Form1!datepickerThru.Value,"yyyymmdd",V.Local.sEndDate)
+			
+			F.Intrinsic.String.Build("{0} and V_QUOTE_HEADER.DATE_QUOTE_CNV between '{1}' and '{2}'",V.Local.sSel,V.Local.sBegdate,V.Local.sEndDate,V.Local.sSel)
+		F.Intrinsic.Control.EndIf
+			
+		'rep range
+		F.Intrinsic.Control.If(V.Screen.Form1!chkAllReps.Value,=,0)
+			F.Intrinsic.String.Build("{0} and V_QUOTE_HEADER.SALESPERSON between '{1}' and '{2}'",V.Local.sSel,V.Local.sBegSP(0).Trim,V.Local.sEndSP(0).Trim,V.Local.sSel)
+		F.Intrinsic.Control.EndIf
+			
+		'cust range
+		F.Intrinsic.Control.If(V.Screen.Form1!chkALLCust.Value,=,0)
+			F.Intrinsic.String.Build("{0} and V_QUOTE_HEADER.CUSTOMER between '{1}' and '{2}'",V.Local.sSel,V.Local.sBegCust(0).Trim,V.Local.sEndCust(0).Trim,V.Local.sSel)
+		F.Intrinsic.Control.EndIf
+			
+		'BU range
+		F.Intrinsic.Control.If(V.Screen.Form1!chkBUAll.Value,=,0)
+			F.Intrinsic.String.Build("{0} and ORDER_HEADER.CODE_SORT between '{1}' and '{2}'",V.Local.sSel,V.Screen.Form1!dropdownlistBUFrm.Text,V.Screen.Form1!dropdownlistBUend.Text,V.Local.sSel)
+		F.Intrinsic.Control.EndIf
+	
+		F.Data.DataTable.CreateFromSQL("temp","con",V.Local.sSel)
+		
+		F.Intrinsic.Control.If(V.DataTable.Temp.RowCount,>,0)
+			F.Data.DataTable.Merge("temp","Order",True,4)
+		F.Intrinsic.Control.EndIf
+		
+		F.Data.DataTable.Close("Temp")
+	
+	F.Intrinsic.Control.EndIf
+	
+	F.Data.DataTable.SaveToDB("Order","con","GCG_3496_BU_APPL_RPT","",128)
+	
+	v.Local.iCnt.Declare
+	v.Local.sCompDate.Declare
+	v.Local.sSQL.Declare
+	f.Intrinsic.Control.For(v.Local.iCnt,0,v.DataTable.Order.RowCount--,1)
+		F.Intrinsic.String.Build("Select USER_1 from V_ORDER_HEADER where ORDER_NO = '{0}'",v.DataTable.Order(v.Local.iCnt).ORDER_NO!FieldValTrim,v.Local.sSQL)
+		f.ODBC.Connection!con.executeandreturn(v.Local.sSQL,v.Local.sCompDate)
+		f.Intrinsic.String.Build("Update GCG_3496_BU_APPL_RPT set DATE_COMPLETION = '{0}' where ORDER_NO = '{1}' and TRMNL = '{2}'",v.Local.sCompDate,v.DataTable.Order(v.Local.iCnt).ORDER_NO!FieldValTrim,v.Caller.Terminal,v.Local.sSQL)
+		f.ODBC.Connection!con.execute(v.Local.sSQL)
+	f.Intrinsic.Control.Next(v.Local.iCnt)
+	
+	F.Intrinsic.Control.CallSub(Printreport)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(errorhandler, "Sub", V.Ambient.CurrentSubroutine, "ErrNo", V.Ambient.ErrorNumber, "ErrDesc", V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+Program.Sub.Quote.End
+
+Program.Sub.PackingList.Start
+
+V.Local.sSelX.Declare(String)
+V.Local.sSel.Declare(String)
+V.Local.sSelOpenOrder.Declare(String)
+V.Local.sSelOrderHist.Declare(String)
+V.Local.sBegdate.Declare(String)
+V.Local.sEndDate.Declare(String)
+V.Local.sBegSP.Declare(String)
+V.Local.sEndSP.Declare(String)
+V.Local.sBegCust.Declare(String)
+V.Local.sEndCust.Declare(String)
+V.Local.sBegAppl.Declare(String)
+V.Local.sEndAppl.Declare(String)
+V.Local.iFor.Declare(Long)
+
+V.uGlobal.uOrder.Redim(-1,-1)
+
+F.Intrinsic.String.Split(V.Screen.Form1!dropdownlistBegRep.Text,"-",V.Local.sBegSP)
+F.Intrinsic.String.Split(V.Screen.Form1!dropdownlistEndRep.Text,"-",V.Local.sEndSP)
+
+F.Intrinsic.String.Split(V.Screen.Form1!txtCustFrm.Text,"-",V.Local.sBegCust)
+F.Intrinsic.String.Split(V.Screen.Form1!txtCustThru.Text,"-",V.Local.sEndCust)
+
+F.Intrinsic.String.Split(V.Screen.Form1!dropdownlistAPPLBegin.Text,"-",V.Local.sBegAppl)
+F.Intrinsic.String.Split(V.Screen.Form1!dropdownlistAPPLEnd.Text,"-",V.Local.sEndAppl)
+
+F.Intrinsic.String.Build("delete from GCG_3496_BU_APPL_RPT where TRMNL='{0}' or rtrim(TRMNL)=''",V.Caller.Terminal,V.Local.sSelX)
+F.ODBC.Connection!Con.Execute(V.Local.sSelX)
+
+'open
+F.Intrinsic.Control.If(V.Screen.Form1!chkopen.Value,=,1)
+	F.Intrinsic.String.Concat("select distinct '",V.Caller.Terminal,"' as TRMNL, ORDER_HEADER.ORDER_NO, V_ORDER_LINES.RECORD_NO,V_ORDER_LINES.PART, V_ORDER_LINES.DESCRIPTION, V_ORDER_LINES.QTY_ORDERED, ORDER_HEADER.CUSTOMER as NAME,  ORDER_HEADER.DATE_DUE_CNV as DATE_DUE, ORDER_HEADER.DATE_ORDER_CNV as DATE_ORDER, '' as APPLICATION, ORDER_HEADER.CODE_SORT, ORDER_HEADER.SALESPERSON, EXTENSION, COST from ORDER_HEADER  inner join V_ORDER_LINES on ORDER_HEADER.ORDER_NO=V_ORDER_LINES.ORDER_NO ",V.Local.sSel)
+		F.Intrinsic.Control.If(V.Screen.Form1!chkAllAppl.Value,=,0)
+			F.Intrinsic.String.Concat(V.Local.sSel," left outer join ATG_OE_USER_FIELDS on ORDER_HEADER.ORDER_NO=ATG_OE_USER_FIELDS.ORDER_NO ",V.Local.sSel)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.String.Concat(V.Local.sSel,"  where V_ORDER_LINES.DATE_SHIP <>'1900-01-01'  and V_ORDER_LINES.RECORD_NO<>'8000' and V_ORDER_LINES.LINE_TYPE<>'P'  and ORDER_HEADER.RECORD_NO='  A' ",V.Local.sSel)
+
+		'appl range
+		F.Intrinsic.Control.If(V.Screen.Form1!chkAllAppl.Value,=,0)
+			F.Intrinsic.String.Concat(V.Local.sSel," and (left(USER_FIELD_16,3) between '",V.Local.sBegAppl.Trim,"' and '",V.Local.sEndAppl.Trim,"' or left(USER_FIELD_31,3) between '",V.Local.sBegAppl.Trim,"' and '",V.Local.sEndAppl.Trim,"' or left(USER_FIELD_46,3) between '",V.Local.sBegAppl.Trim,"' and '",V.Local.sEndAppl.Trim,"'or left(USER_FIELD_76,3) between '",V.Local.sBegAppl.Trim,"' and '",V.Local.sEndAppl.Trim,"')",V.Local.sSel)
+		F.Intrinsic.Control.EndIf
+		'date range
+		F.Intrinsic.Control.If(V.Screen.Form1!chkAllDates.Value,=,0)
+			F.Intrinsic.String.Format(V.Screen.Form1!datepickerFrm.Value,"yyyymmdd",V.Local.sBegdate)
+			F.Intrinsic.String.Format(V.Screen.Form1!datepickerThru.Value,"yyyymmdd",V.Local.sEndDate)
+				F.Intrinsic.String.Concat(V.Local.sSel," and ORDER_HEADER.DATE_ORDER_CNV between '",V.Local.sBegdate,"' and '",V.Local.sEndDate,"'",V.Local.sSel)
+		F.Intrinsic.Control.EndIf
+		'rep range
+		F.Intrinsic.Control.If(V.Screen.Form1!chkAllReps.Value,=,0)
+			F.Intrinsic.String.Concat(V.Local.sSel," and ORDER_HEADER.SALESPERSON between '",V.Local.sBegSP(0).Trim,"' and '",V.Local.sEndSP(0).Trim,"'",V.Local.sSel)
+		F.Intrinsic.Control.EndIf
+		'cust range
+		F.Intrinsic.Control.If(V.Screen.Form1!chkALLCust.Value,=,0)
+			F.Intrinsic.String.Concat(V.Local.sSel," and ORDER_HEADER.CUSTOMER between '",V.Local.sBegCust(0).Trim,"' and '",V.Local.sEndCust(0).Trim,"'",V.Local.sSel)
+		F.Intrinsic.Control.EndIf
+		'BU range
+		F.Intrinsic.Control.If(V.Screen.Form1!chkBUAll.Value,=,0)
+			F.Intrinsic.String.Concat(V.Local.sSel," and ORDER_HEADER.CODE_SORT between '",V.Screen.Form1!dropdownlistBUFrm.Text,"' and '",V.Screen.Form1!dropdownlistBUend.Text,"'",V.Local.sSel)
+		F.Intrinsic.Control.EndIf
+
+	F.ODBC.Connection!Con.OpenRecordsetRO("rstA",V.Local.sSel)
+		F.Intrinsic.Control.If(V.ODBC.Con!rstA.EOF,=,False)
+			F.Intrinsic.Variable.LoadUDTFromRecordset("Con","rstA","Variable.uGlobal.uOrder",False,0)
+		F.Intrinsic.Control.EndIf
+	F.ODBC.Con!rstA.Close
+
+F.Intrinsic.Control.EndIf
+'closed
+F.Intrinsic.Control.If(V.Screen.Form1!chkClosed.Value,=,1)
+	F.Intrinsic.String.Concat("select distinct '",V.Caller.Terminal,"' as TRMNL,  ORDER_HIST_HEAD.ORDER_NO, ORDER_HIST_LINE.PART,ORDER_HIST_LINE.DESCRIPTION, ORDER_HIST_LINE.QTY_ORDERED, ORDER_HIST_HEAD.CUSTOMER as NAME, ORDER_HIST_HEAD.DATE_ORDER_DUE as DATE_DUE,ORDER_HIST_HEAD.DATE_ORDER,  '' as APPLICATION, CODE_SORT, SALESPERSON, ORDER_HIST_LINE.EXTENSION, ORDER_HIST_LINE.COST,ORDER_HIST_LINE.ORDER_LINE as RECORD_NO from ORDER_HIST_HEAD inner join ORDER_HIST_LINE on ORDER_HIST_HEAD.ORDER_NO = ORDER_HIST_LINE.ORDER_NO ",V.Local.sSel)
+		F.Intrinsic.Control.If(V.Screen.Form1!chkAllAppl.Value,=,0)
+			F.Intrinsic.String.Concat(V.Local.sSel," left outer join ATG_OE_USER_FIELDS on ORDER_HIST_HEAD.ORDER_NO=ATG_OE_USER_FIELDS.ORDER_NO ",V.Local.sSel)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.String.Concat(V.Local.sSel,"where ORDER_HIST_LINE.ORDER_LINE<>'8000' and ORDER_HIST_LINE.LINE_TYPE<>'P'",V.Local.sSel)
+
+		'date range
+		F.Intrinsic.Control.If(V.Screen.Form1!chkAllDates.Value,=,0)
+			F.Intrinsic.String.Format(V.Screen.Form1!datepickerFrm.Value,"yyyymmdd",V.Local.sBegdate)
+			F.Intrinsic.String.Format(V.Screen.Form1!datepickerThru.Value,"yyyymmdd",V.Local.sEndDate)
+				F.Intrinsic.String.Concat(V.Local.sSel," and ORDER_HIST_HEAD.DATE_ORDER between '",V.Local.sBegdate,"' and '",V.Local.sEndDate,"'",V.Local.sSel)
+		F.Intrinsic.Control.EndIf
+		'rep range
+		F.Intrinsic.Control.If(V.Screen.Form1!chkAllReps.Value,=,0)
+			F.Intrinsic.String.Concat(V.Local.sSel," and SALESPERSON between '",V.Local.sBegSP(0).Trim,"' and '",V.Local.sEndSP(0).Trim,"'",V.Local.sSel)
+		F.Intrinsic.Control.EndIf
+		'cust range
+		F.Intrinsic.Control.If(V.Screen.Form1!chkALLCust.Value,=,0)
+			F.Intrinsic.String.Concat(V.Local.sSel," and ORDER_HIST_HEAD.CUSTOMER between '",V.Local.sBegCust(0).Trim,"' and '",V.Local.sEndCust(0).Trim,"'",V.Local.sSel)
+		F.Intrinsic.Control.EndIf
+		'BU range
+		F.Intrinsic.Control.If(V.Screen.Form1!chkBUAll.Value,=,0)
+			F.Intrinsic.String.Concat(V.Local.sSel," and ORDER_HIST_HEAD.CODE_SORT between '",V.Screen.Form1!dropdownlistBUFrm.Text,"' and '",V.Screen.Form1!dropdownlistBUend.Text,"'",V.Local.sSel)
+		F.Intrinsic.Control.EndIf
+		'appl range
+		F.Intrinsic.Control.If(V.Screen.Form1!chkAllAppl.Value,=,0)
+			F.Intrinsic.String.Concat(V.Local.sSel," and (left(USER_FIELD_16,3) between '",V.Local.sBegAppl.Trim,"' and '",V.Local.sEndAppl.Trim,"' or left(USER_FIELD_31,3) between '",V.Local.sBegAppl.Trim,"' and '",V.Local.sEndAppl.Trim,"' or left(USER_FIELD_46,3) between '",V.Local.sBegAppl.Trim,"' and '",V.Local.sEndAppl.Trim,"'or left(USER_FIELD_76,3) between '",V.Local.sBegAppl.Trim,"' and '",V.Local.sEndAppl.Trim,"')",V.Local.sSel)
+		F.Intrinsic.Control.EndIf
+
+
+	F.ODBC.Connection!Con.OpenRecordsetRO("rstA",V.Local.sSel)
+		F.Intrinsic.Control.If(V.ODBC.Con!rstA.EOF,=,False)
+			F.Intrinsic.Variable.LoadUDTFromRecordset("Con","rstA","Variable.uGlobal.uOrder",True,0)
+		F.Intrinsic.Control.EndIf
+	F.ODBC.Con!rstA.Close
+
+F.Intrinsic.Control.EndIf
+
+'	Function.Intrinsic.Variable.UDTSetMemberValue(V.uGlobal.uOrder!TRMNL,V.Caller.Terminal)
+
+
+F.Intrinsic.String.Concat("select * from ATG_BU_APPL_RPTS ","",V.Local.sSelX)
+F.ODBC.Connection!Con.OpenRecordsetRW("rstX",V.Local.sSelX)
+	F.Intrinsic.Variable.SaveUDTToRecordset("Con","rstX","variable.uGlobal.uOrder")
+F.ODBC.Con!rstX.Close
+
+F.Intrinsic.Control.CallSub(Printreport)
+
+
+
+Program.Sub.PackingList.End
+
+Program.Sub.Bookings.Start
+F.Intrinsic.Control.Try
+	V.Local.sSelX.Declare(String)
+	V.Local.sSel.Declare(String)
+	V.Local.sSelB.Declare(String)
+	V.Local.sSelC.Declare(String)
+	V.Local.sSelOpenOrder.Declare(String)
+	V.Local.sSelOrderHist.Declare(String)
+	V.Local.dBegdate.Declare(String)
+	V.Local.dEndDate.Declare(String)
+	V.Local.sBegSP.Declare(String)
+	V.Local.sEndSP.Declare(String)
+	V.Local.sBegCust.Declare(String)
+	V.Local.sEndCust.Declare(String)
+	V.Local.sBegAppl.Declare(String)
+	V.Local.sEndAppl.Declare(String)
+	V.Local.fExtension.Declare(Float)
+	V.Local.fBefore.Declare(Float)
+	V.Local.fAfter.Declare(Float)
+	V.Local.iFor.Declare(Long)
+	V.Local.iForChange.Declare(Long)
+	V.Local.sRet.Declare(String)
+	V.Local.iRedim.Declare(Long)
+	V.Local.iForRet.Declare(Long)
+	V.Local.sElement.Declare(String)
+	V.Local.sfile.Declare(String)
+	V.Local.sDNE.Declare(String)
+	V.Local.fExtensionTemp.Declare(Float)
+	V.Local.fQtyOrderedTemp.Declare(Float)
+	V.Local.fCostTemp.Declare(Float)
+	V.Local.sApplTemp.Declare(String)
+	V.Local.sBeforeTemp.Declare(String)
+	V.Local.sAfterTemp.Declare(String)
+	
+	'get rep Id
+	F.Intrinsic.String.Split(V.Screen.Form1!dropdownlistBegRep.Text,"-",V.Local.sBegSP)
+	F.Intrinsic.String.Split(V.Screen.Form1!dropdownlistEndRep.Text,"-",V.Local.sEndSP)
+	'get customer id
+	F.Intrinsic.String.Split(V.Screen.Form1!txtCustFrm.Text,"-",V.Local.sBegCust)
+	F.Intrinsic.String.Split(V.Screen.Form1!txtCustThru.Text,"-",V.Local.sEndCust)
+	'get application number
+	F.Intrinsic.String.Split(V.Screen.Form1!dropdownlistAPPLBegin.Text,"-",V.Local.sBegAppl)
+	F.Intrinsic.String.Split(V.Screen.Form1!dropdownlistAPPLEnd.Text,"-",V.Local.sEndAppl)
+	'format dates for tables
+	V.Local.dBegdate.Set(V.Screen.Form1!datepickerFrm.Value)
+	V.Local.dEndDate.Set(V.Screen.Form1!datepickerThru.Value)
+	
+	'clear existing data from table for the calling terminal
+	F.Intrinsic.String.Build("delete from GCG_3496_BU_APPL_RPT where TRMNL='{0}' or rtrim(TRMNL)=''",V.Caller.Terminal,V.Local.sSelX)
+	F.ODBC.Connection!Con.Execute(V.Local.sSelX)
+	
+	'get all order changes in the given date range
+	F.Intrinsic.Control.If(V.Screen.Form1!chkAllDates.Value,=,1)
+		V.Local.sSel.Set("select distinct ORDER_NO,RECORD_NO,CHANGE_DATE as DATE_ORDER,PART,CUST_NO AS NAME,SALESMAN AS SALESPERSON,BEFORE,AFTER,FIELD_NAME from V_ORDER_CHANGES where (FIELD_NAME='Extended Amt' or left(FIELD_NAME,3)='ALL') order by Change_Date,Change_Time")
+	F.Intrinsic.Control.Else	
+		F.Intrinsic.String.Build("select distinct ORDER_NO,RECORD_NO,CHANGE_DATE as DATE_ORDER,PART,CUST_NO AS NAME,SALESMAN AS SALESPERSON,BEFORE,AFTER,FIELD_NAME from V_ORDER_CHANGES where (FIELD_NAME='Extended Amt' or left(FIELD_NAME,3)='ALL') and  CHANGE_DATE between'{0}' and '{1}' order by Change_Date,Change_Time",V.Local.dBegdate.PervasiveDate,V.Local.dEndDate.PervasiveDate,V.Local.sSel)
+	F.Intrinsic.Control.EndIf
+	
+	F.ODBC.Connection!con.OpenLocalRecordSetRO("rstChange",V.Local.sSel)
+	
+	F.Intrinsic.Control.DoUntil(V.ODBC.con!rstChange.EOF,=,True)
+	
+		V.Local.sBeforeTemp.Set(V.ODBC.con!rstChange.FieldValTrim!BEFORE)
+		V.Local.sAfterTemp.Set(V.ODBC.con!rstChange.FieldValTrim!AFTER)
+		
+		F.Intrinsic.Control.If(V.Local.sBeforeTemp.Right1,=,"-")
+			F.Intrinsic.String.Split(V.Local.sBeforeTemp,"-",V.Local.sBeforeTemp)
+			F.Intrinsic.Math.Mult(V.Local.sBeforeTemp.Float,-1,V.Local.fBefore)
+		F.Intrinsic.Control.Else
+			V.Local.fBefore.Set(V.Local.sBeforeTemp.Float)
+		F.Intrinsic.Control.EndIf
+		
+		F.Intrinsic.Control.If(V.Local.sAfterTemp.Right1,=,"-")
+			F.Intrinsic.String.Split(V.Local.sAfterTemp,"-",V.Local.sAfterTemp)
+			F.Intrinsic.Math.Mult(V.Local.sAfterTemp.Float,-1,V.Local.fAfter)
+		F.Intrinsic.Control.Else
+			V.Local.fAfter.Set(V.Local.sAfterTemp.Float)
+		F.Intrinsic.Control.EndIf
+		
+		F.Data.DataTable.AddRow("Change","Order_No",V.ODBC.con!rstChange.FieldVal!Order_NO,"Record_No",V.ODBC.con!rstChange.FieldVal!Record_No,"Date_Order",V.ODBC.con!rstChange.FieldVal!Date_Order,"Part",V.ODBC.con!rstChange.FieldVal!Part,"Name",V.ODBC.con!rstChange.FieldVal!Name,"SalesPerson",V.ODBC.con!rstChange.FieldVal!SalesPerson,"Before",V.Local.fBefore,"After",V.Local.fAfter,"Field_Name",V.ODBC.con!rstChange.FieldVal!Field_Name)
+		
+		F.ODBC.con!rstChange.MoveNext
+	F.Intrinsic.Control.Loop
+	
+	'get orders deleted in range
+	F.Intrinsic.Control.If(V.Screen.Form1!chkAllDates.Value,=,1)
+		F.Intrinsic.String.Build("select distinct ORDER_NO,ORDER_LINE as RECORD_NO,DATE_ORDER,PART,CUSTOMER as NAME,SALESPERSON,CAST(TOTAL_DOLLARS AS FLOAT) as AFTER,CAST(0.0 AS FLOAT) as BEFORE, 'Delete Amt' as FIELD_NAME from V_ORDER_DELETES where PROD_LINE<>'PB' and ('{0}'= '1' or Customer between '{1}' and '{2}')",V.Screen.Form1!chkALLCust.Value,V.Local.sBegCust(0),V.Local.sEndCust(0),V.Local.sSel)
+	F.Intrinsic.Control.Else
+		F.Intrinsic.String.Build("select distinct ORDER_NO,ORDER_LINE as RECORD_NO,DATE_ORDER,PART,CUSTOMER as NAME,SALESPERSON,CAST(TOTAL_DOLLARS AS FLOAT) as AFTER,CAST(0.0 AS FLOAT) as BEFORE, 'Delete Amt' as FIELD_NAME from V_ORDER_DELETES where  PROD_LINE<>'PB' and CHG_DATE between'{0}' and '{1}'and ('{2}'= '1' or Customer between '{3}' and '{4}') ",V.Local.dBegdate.PervasiveDate,V.Local.dEndDate.PervasiveDate,V.Screen.Form1!chkALLCust.Value,V.Local.sBegCust(0),V.Local.sEndCust(0),V.Local.sSel)
+	F.Intrinsic.Control.EndIf
+	
+	F.Data.Datatable.CreateFromSQL("temp","con",V.Local.sSel)
+	
+	F.Intrinsic.Control.If(V.DataTable.Temp.RowCount,>,0)
+		F.Data.DataTable.Merge("temp","Change",True,2)
+	F.Intrinsic.Control.EndIf
+	
+	F.Data.DataTable.Close("temp")
+	
+	'get all deleted orders
+	F.Intrinsic.Control.If(V.Screen.Form1!chkAllDates.Value,=,1)
+		V.Local.sSel.Set("select distinct ORDER_NO,ORDER_LINE from ORDER_DELETES where PROD_LINE <> 'PB'")
+	F.Intrinsic.Control.Else
+		F.Intrinsic.String.Build("select distinct ORDER_NO,ORDER_LINE  from ORDER_DELETES where  PROD_LINE<>'PB' and DATE_ORDER between'{0}' and '{1}'",V.Local.dBegdate.PervasiveDate,V.Local.dEndDate.PervasiveDate,V.Local.sSel)
+	F.Intrinsic.Control.EndIf
+	
+	F.Data.DataTable.CreateFromSQL("temp","con",V.Local.sSel)
+	
+	F.Intrinsic.Control.If(V.DataTable.Temp.RowCount,>,0)
+		F.Data.DataTable.Merge("temp","Delete",True,4)
+	F.Intrinsic.Control.EndIf
+	
+	F.Data.DataTable.Close("temp")
+	
+	'get all blanket orders
+	V.Local.sSel.Set("select Order_No, Blanket_No from Order_Header where (Blanket_No <> '' and Blanket_No <> '0000000') and Order_No <> Blanket_No order by Order_No")
+	
+	F.Data.DataTable.CreateFromSQL("temp","con",V.Local.sSel)
+	
+	F.Intrinsic.Control.If(V.DataTable.temp.RowCount,>,0)
+		F.Data.DataTable.Merge("temp","Blanket",True,4)
+	F.Intrinsic.Control.EndIf
+	
+	F.Data.DataTable.Close("temp")
+	
+	F.Data.DataTable.AcceptChanges("Blanket")
+	
+	V.Local.sSel.Set("select Order_No,Blanket_No from Order_Hist_Head where (Blanket_No <> '' and Blanket_No <> '0000000') and Order_No <> Blanket_No order by Order_No")
+	
+	F.Data.DataTable.CreateFromSQL("temp","con",V.Local.sSel)
+	
+	F.Intrinsic.Control.If(V.DataTable.Temp.RowCount,>,0)
+		F.Data.DataTable.Merge("temp","Blanket",True,4)
+	F.Intrinsic.Control.EndIf
+	
+	F.Data.DataTable.AcceptChanges("Blanket")
+	
+	'The dictionary is used multiple times throughout to delete orders that are blanket orders
+	F.Data.Dictionary.CreateFromDataTable("tempD","temp","Order_No","Blanket_No",2,True)
+	F.Data.Dictionary.SetDefaultReturn("tempD","DNE")
+	
+	F.Intrinsic.Control.For(V.Local.iFor,V.DataTable.Change.RowCount--,0,-1)
+		V.Local.sDNE.Set(V.Dictionary.TempD![V.DataTable.Change(V.Local.iFor).Order_No!FieldVal])
+		
+		F.Intrinsic.Control.If(V.Local.sDNE,<>,"DNE")
+			F.Data.Datatable.DeleteRow("Change",V.Local.iFor)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.Next(V.Local.iFor)
+	
+	F.Data.DataTable.Close("temp")
+	
+	F.Data.DataTable.AcceptChanges("Change")
+	
+	F.Data.DataTable.AddExpressionColumn("Change","Extension","Float","IIF(FIELD_NAME = 'Extended Amt',AFTER - BEFORE, IIF(FIELD_NAME = 'Delete Amt',BEFORE - AFTER,0))")
+	
+	F.Intrinsic.Control.If(V.DataTable.Change.RowCount,>,0)
+		F.Data.DataTable.Merge("Change","Order",True,2)
+	F.Intrinsic.Control.EndIf	
+	
+	' get all bookings
+	F.Intrinsic.Control.If(V.Screen.Form1!chkAllDates.Value,=,1)
+		V.Local.sSel.Set("select distinct ORDER_NO,ORDER_LINE as RECORD_NO, DATE_ORDER,PART,CAST(QTY AS FLOAT) as QTY_ORDERED,CUSTOMER as NAME,SALESPERSON,CAST(TOTAL_DOLLARS AS FLOAT) as EXTENSION from V_ORDER_BOOKING  ")
+	F.Intrinsic.Control.Else
+		F.Intrinsic.String.Build("select distinct ORDER_NO,ORDER_LINE as RECORD_NO,DATE_ORDER,PART,CAST(QTY AS FLOAT) as QTY_ORDERED,CUSTOMER as NAME,SALESPERSON,CAST(TOTAL_DOLLARS AS FLOAT) as EXTENSION from V_ORDER_BOOKING where CHG_DATE between'{0}' AND '{1}'",V.Local.dBegdate.PervasiveDate,V.Local.dEndDate.PervasiveDate,V.Local.sSel)
+	F.Intrinsic.Control.EndIf
+	
+	F.Data.DataTable.CreateFromSQL("temp","con",V.Local.sSel)
+	
+	F.Intrinsic.Control.If(v.DataTable.Temp.RowCount,>,0)
+		F.Data.DataTable.Merge("temp","Order",True,4)
+	F.Intrinsic.Control.EndIf
+	
+	F.Data.DataTable.Close("temp")
+	
+	' delete bookings for blanket orders
+	F.Intrinsic.Control.For(V.Local.iFor,V.DataTable.Order.RowCount--,0,-1)
+		V.Local.sDNE.Set(V.Dictionary.TempD![V.DataTable.Order(V.Local.iFor).Order_No!FieldVal])
+		
+		F.Intrinsic.Control.If(V.Local.sDNE,<>,"DNE")
+			F.Data.Datatable.DeleteRow("Order",V.Local.iFor)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.Next(V.Local.iFor)
+	
+	F.Data.DataTable.AcceptChanges("Order")
+	
+	F.Intrinsic.Control.If(V.DataTable.Order.RowCount,>,0)
+		F.Intrinsic.Control.If(V.Screen.Form1!chkopen.Value,=,1)
+			'**********OPEN ITEMS*************
+			V.Local.sSel.Set("select distinct  V_ORDER_HEADER.ORDER_NO,V_ORDER_HEADER.RECORD_NO,V_ORDER_HEADER.CUSTOMER,V_ORDER_HEADER.DATE_DUE,V_ORDER_HEADER.DATE_ORDER,V_ORDER_HEADER.SALESPERSON,V_ORDER_HEADER.CODE_SORT FROM V_ORDER_HEADER")
+			
+			F.Intrinsic.Control.If(V.Screen.Form1!chkAllAppl.Value,=,0)
+				F.Intrinsic.String.Build("{0} left outer join ATG_OE_USER_FIELDS on V_ORDER_HEADER.ORDER_NO = ATG_OE_USER_FIELDS.ORDER_NO ",V.Local.sSel,V.Local.sSel)
+			F.Intrinsic.Control.EndIf
+			
+			F.Intrinsic.String.Build("{0} left outer join V_ORDER_LINES on V_ORDER_HEADER.ORDER_NO = V_ORDER_LINES.ORDER_NO ",V.Local.sSel,V.Local.sSel)
+			F.Intrinsic.String.Build("{0} where V_Order_Lines.GL_ACCOUNT BETWEEN  '40000' AND '40160.99'  and  V_ORDER_HEADER.RECORD_NO='  A'  and  V_ORDER_LINES.LINE_TYPE <> 'P' ",V.Local.sSel,V.Local.sSel)
+			
+			'appl range
+			F.Intrinsic.Control.If(V.Screen.Form1!chkAllAppl.Value,=,0)
+				F.Intrinsic.String.Build("{0} and (left(ATG_OE_USER_FIELDS.USER_FIELD_16,3) between '{1}' AND '{2}' or left(ATG_OE_USER_FIELDS.USER_FIELD_31,3) between '{1}' AND '{2}' or left(ATG_OE_USER_FIELDS.USER_FIELD_46,3) between '{1}' AND '{2}' or left(ATG_OE_USER_FIELDS.USER_FIELD_76,3) between '{1}' AND '{2}')",V.Local.sSel,V.Local.sBegAppl.Trim,V.Local.sEndAppl.Trim,V.Local.sSel)
+			F.Intrinsic.Control.EndIf
+			
+			'rep range
+			F.Intrinsic.Control.If(V.Screen.Form1!chkAllReps.Value,=,0)
+				F.Intrinsic.String.Build("{0} and V_ORDER_HEADER.SALESPERSON between '{1}' AND '{2}'",V.Local.sSel,V.Local.sBegSP(0).Trim,V.Local.sEndSP(0).Trim,V.Local.sSel)
+			F.Intrinsic.Control.EndIf
+			
+			'cust range
+			F.Intrinsic.Control.If(V.Screen.Form1!chkALLCust.Value,=,0)
+				F.Intrinsic.String.Build("{0} and V_ORDER_HEADER.CUSTOMER between '{1}' AND '{2}'",V.Local.sSel,V.Local.sBegCust(0).Trim,V.Local.sEndCust(0).Trim,V.Local.sSel)
+			F.Intrinsic.Control.EndIf
+			
+			'BU range
+			F.Intrinsic.Control.If(V.Screen.Form1!chkBUAll.Value,=,0)
+				F.Intrinsic.String.Build("{0} and V_ORDER_HEADER.CODE_SORT between '{1}' AND '{2}'",V.Local.sSel,V.Screen.Form1!dropdownlistBUFrm.Text,V.Screen.Form1!dropdownlistBUend.Text,V.Local.sSel)
+			F.Intrinsic.Control.EndIf
+		
+			F.Intrinsic.String.Build("{0} order by V_ORDER_HEADER.ORDER_NO",V.Local.sSel,V.Local.sSel)
+			
+			F.Data.DataTable.CreateFromSQL("temp","con",V.Local.sSel)
+			
+			F.Intrinsic.Control.If(V.DataTable.Temp.RowCount,>,0)
+				F.Data.DataTable.Merge("temp","Header",True,4)
+			F.Intrinsic.Control.EndIf
+			
+			F.Data.DataTable.AcceptChanges("Header")
+			
+			F.Data.DataTable.Close("temp")
+		F.Intrinsic.Control.EndIf
+	
+		F.Intrinsic.Control.If(V.Screen.Form1!chkclosed.Value,=,1)
+		'**********HISTORY*************
+			V.Local.sSel.Set("select distinct  V_ORDER_HIST_HEAD.ORDER_NO,V_ORDER_HIST_LINE.ORDER_LINE as RECORD_NO,V_ORDER_HIST_HEAD.CUSTOMER,V_ORDER_HIST_HEAD.DATE_ORDER_DUE AS DATE_DUE,V_ORDER_HIST_HEAD.DATE_ORDER,V_ORDER_HIST_LINE.SALESPERSON,V_ORDER_HIST_HEAD.CODE_SORT FROM V_ORDER_HIST_HEAD")
+			F.Intrinsic.String.Build("{0} left outer join V_ORDER_HIST_LINE on V_ORDER_HIST_HEAD.ORDER_NO = V_ORDER_HIST_LINE.ORDER_NO ",V.Local.sSel,V.Local.sSel)
+			
+			F.Intrinsic.Control.If(V.Screen.Form1!chkAllAppl.Value,=,0)
+				F.Intrinsic.String.Build("{0} left outer join ATG_OE_USER_FIELDS on V_ORDER_HIST_HEAD.ORDER_NO = ATG_OE_USER_FIELDS.ORDER_NO ",V.Local.sSel,V.Local.sSel)
+			F.Intrinsic.Control.EndIf
+			
+			F.Intrinsic.String.Build("{0} where V_Order_Hist_Line.GL_ACCOUNT BETWEEN  '40000' AND '40160.99' and V_ORDER_HIST_HEAD.ORDER_NO <> '' and V_ORDER_HIST_LINE.LINE_TYPE <> 'P'",V.Local.sSel,V.Local.sSel)
+			
+			'appl range
+			F.Intrinsic.Control.If(V.Screen.Form1!chkAllAppl.Value,=,0)
+				F.Intrinsic.String.Build("{0} and (left(ATG_OE_USER_FIELDS.USER_FIELD_16,3) between '{1}' AND '{2}' or left(ATG_OE_USER_FIELDS.USER_FIELD_31,3) between '{1}' AND '{2}' or left(ATG_OE_USER_FIELDS.USER_FIELD_46,3) between '{1}' AND '{2}' or left(ATG_OE_USER_FIELDS.USER_FIELD_76,3) between '{1}' AND '{2}')",V.Local.sSel,V.Local.sBegAppl.Trim,V.Local.sEndAppl.Trim,V.Local.sSel)
+			F.Intrinsic.Control.EndIf
+			
+			'rep range
+			F.Intrinsic.Control.If(V.Screen.Form1!chkAllReps.Value,=,0)
+				F.Intrinsic.String.Build("{0} and V_ORDER_HIST_LINE.SALESPERSON between '{1}' AND '{2}'",V.Local.sSel,V.Local.sBegSP(0).Trim,V.Local.sEndSP(0).Trim,V.Local.sSel)
+			F.Intrinsic.Control.EndIf
+			
+			'cust range
+			F.Intrinsic.Control.If(V.Screen.Form1!chkALLCust.Value,=,0)
+				F.Intrinsic.String.Build("{0} and V_ORDER_HIST_HEAD.CUSTOMER between '{1}' AND '{2}'",V.Local.sSel,V.Local.sBegCust(0).Trim,V.Local.sEndCust(0).Trim,V.Local.sSel)
+			F.Intrinsic.Control.EndIf
+			
+			'BU range
+			F.Intrinsic.Control.If(V.Screen.Form1!chkBUAll.Value,=,0)
+				F.Intrinsic.String.Build("{0} and V_ORDER_HIST_HEAD.CODE_SORT between '{1}' AND '{2}'",V.Local.sSel,V.Screen.Form1!dropdownlistBUFrm.Text,V.Screen.Form1!dropdownlistBUend.Text,V.Local.sSel)
+			F.Intrinsic.Control.EndIf
+		
+			F.Intrinsic.String.Build("{0} order by  V_ORDER_HIST_HEAD.ORDER_NO",V.Local.sSel,V.Local.sSel)
+			
+			F.Data.DataTable.CreateFromSQL("temp","con",V.Local.sSel)
+			
+			F.Intrinsic.Control.If(V.DataTable.Temp.RowCount,>,0)
+				F.Data.DataTable.Merge("temp","Header",True,4)
+			F.Intrinsic.Control.EndIf
+			
+			F.Data.DataTable.AcceptChanges("Header")
+			
+			F.Data.DataTable.Close("temp")
+		F.Intrinsic.Control.EndIf
+		'*************************************************
+	
+		'get date due and code sort for all non-deleted orders
+		F.Data.DataTable.CreateFromSQL("temp","con","select distinct  ORDER_NO,DATE_ORDER,DATE_DUE,CODE_SORT from V_ORDER_HEADER")
+		
+		F.Intrinsic.Control.If(V.DataTable.Temp.RowCount,>,0)
+			F.Data.DataTable.Merge("temp","BUAppl",True,4)
+		F.Intrinsic.Control.EndIf
+		
+		F.Data.DataTable.Close("temp")
+	
+		F.Data.DataTable.CreateFromSQL("Temp","con","select distinct  ORDER_NO,DATE_ORDER,DATE_ORDER_DUE AS DATE_DUE ,CODE_SORT from V_ORDER_HIST_HEAD")
+		
+		F.Intrinsic.Control.If(V.DataTable.Temp.RowCount,>,0)
+			F.Data.DataTable.Merge("temp","BUAppl",True,4)
+		F.Intrinsic.Control.EndIf
+		
+		F.Data.DataTable.Close("temp")
+		
+		F.Data.DataTable.CreateFromSQL("temp","con","select Order_no,User_Field_16,User_Field_31, User_Field_46,User_Field_76 from ATG_OE_USER_FIELDS where User_Field_16 <> '' or User_Field_31 <> '' or User_Field_46 <> '' or User_Field_76 <> ''")
+		
+		F.Intrinsic.Control.If(V.DataTable.Temp.RowCount,>,0)
+			F.Data.DataTable.Merge("temp","Appl",True,4)
+		F.Intrinsic.Control.EndIf
+		
+		'This portion of the code required flagging and unflagging stuff based on different conditions. The easiest way I could think of doing this was to create dictionaries for the two tables below and return the value based on the order_no as key.
+		'If it's not found we know we need to delete that row from the datatable.
+		F.Data.DataView.Create("Change","Change_View",22,"Field_Name = 'Delete Amt'","")
+		F.Data.Dictionary.CreateFromDataView("Change_Dict","Change","Change_View","Order_No","Part")
+		F.Data.Dictionary.SetDefaultReturn("Change_Dict","DNE")
+		
+		F.Data.DataView.Create("Header","Header_View",22)
+		F.Data.Dictionary.CreateFromDataView("Header_Dict","Header","Header_View","Order_No","Customer")
+		F.Data.Dictionary.SetDefaultReturn("Header_Dict","DNE")
+	
+		F.Intrinsic.Control.If(V.Screen.Form1!chkclosed.Value,=,1)
+		
+			F.Intrinsic.Control.If(V.Screen.Form1!chkopen.Value,=,1)
+				F.Intrinsic.Control.For(V.Local.iFor,V.DataTable.Order.RowCount--,0,-1)
+					V.Local.sDNE.Set(V.Dictionary.Change_Dict![V.DataTable.Order(V.Local.iFor).Order_No!FieldVal])
+					
+					F.Intrinsic.Control.If(V.Local.sDNE,<>,"DNE")
+						F.Data.DataTable.DeleteRow("Order",V.Local.iFor)
+					F.Intrinsic.Control.Else
+						V.Local.sDNE.Set(V.Dictionary.Header_Dict![V.DataTable.Order(V.Local.iFor).Order_no!FieldVal])
+						
+						F.Intrinsic.Control.If(V.Local.sDNE,=,"DNE")
+							F.Data.DataTable.DeleteRow("Order",V.Local.iFor)
+						F.Intrinsic.Control.EndIf
+					F.Intrinsic.Control.EndIf					
+					
+				F.Intrinsic.Control.Next(V.Local.iFor)
+			F.Intrinsic.Control.Else
+				F.Intrinsic.Control.For(V.Local.iFor,V.DataTable.Header.RowCount--,0,-1)
+					V.Local.sDNE.Set(V.Dictionary.Change_Dict![V.DataTable.Header(V.Local.iFor).Order_No!FieldVal])
+					
+					F.Intrinsic.Control.If(V.Local.sDNE,<>,"DNE")
+						F.Intrinsic.Control.For(V.Local.iForChange,V.DataTable.Order.RowCount--,0,-1)
+							F.Intrinsic.Control.If(V.DataTable.Order(V.Local.iForChange).Order_No!FieldVal,=,V.DataTable.Header(V.Local.iFor).Order_No!FieldVal)
+								F.Data.DataTable.DeleteRow("Order",V.Local.iForChange)
+							F.Intrinsic.Control.EndIf
+						F.Intrinsic.Control.Next(V.Local.iForChange)
+
+						F.Data.DataTable.AcceptChanges("Order")
+					F.Intrinsic.Control.Else
+						V.Local.sDNE.Set(V.Dictionary.Header_Dict![V.DataTable.Order(V.Local.iFor).Order_no!FieldVal])
+						
+						F.Intrinsic.Control.If(V.Local.sDNE,=,"DNE")
+							F.Intrinsic.Control.For(V.Local.iForChange,V.DataTable.Order.RowCount--,0,-1)
+								F.Intrinsic.Control.If(V.DataTable.Order(V.Local.iForChange).Order_No!FieldVal,=,V.DataTable.Header(V.Local.iFor).Order_No!FieldVal)
+									F.Data.DataTable.DeleteRow("Order",V.Local.iForChange)
+								F.Intrinsic.Control.EndIf
+							F.Intrinsic.Control.Next(V.Local.iForChange)
+
+							F.Data.DataTable.AcceptChanges("Order")
+						F.Intrinsic.Control.EndIf
+					F.Intrinsic.Control.EndIf
+					
+				F.Intrinsic.Control.Next(V.Local.iFor)
+			F.Intrinsic.Control.EndIf
+			
+		F.Intrinsic.Control.Else
+			F.Intrinsic.Control.For(V.Local.iFor,V.DataTable.Header.RowCount--,0,-1)
+					V.Local.sDNE.Set(V.Dictionary.Change_Dict![V.DataTable.Header(V.Local.iFor).Order_No!FieldVal])
+					
+					F.Intrinsic.Control.If(V.Local.sDNE,<>,"DNE")
+						F.Intrinsic.Control.For(V.Local.iForChange,V.DataTable.Order.RowCount--,0,-1)
+							F.Intrinsic.Control.If(V.DataTable.Order(V.Local.iForChange).Order_No!FieldVal,=,V.DataTable.Header(V.Local.iFor).Order_No!FieldVal)
+								F.Data.DataTable.DeleteRow("Order",V.Local.iForChange)
+							F.Intrinsic.Control.EndIf
+						F.Intrinsic.Control.Next(V.Local.iForChange)
+						
+						F.Data.DataTable.AcceptChanges("Order")
+					F.Intrinsic.Control.Else
+						V.Local.sDNE.Set(V.Dictionary.Header_Dict![V.DataTable.Order(V.Local.iFor).Order_no!FieldVal])
+						
+						F.Intrinsic.Control.If(V.Local.sDNE,=,"DNE")
+							F.Intrinsic.Control.For(V.Local.iForChange,V.DataTable.Order.RowCount--,0,-1)
+								F.Intrinsic.Control.If(V.DataTable.Order(V.Local.iForChange).Order_No!FieldVal,=,V.DataTable.Header(V.Local.iFor).Order_No!FieldVal)
+									F.Data.DataTable.DeleteRow("Order",V.Local.iForChange)
+								F.Intrinsic.Control.EndIf
+							F.Intrinsic.Control.Next(V.Local.iForChange)
+
+							F.Data.DataTable.AcceptChanges("Order")
+						F.Intrinsic.Control.EndIf
+					F.Intrinsic.Control.EndIf
+									
+			F.Intrinsic.Control.Next(V.Local.iFor)
+		F.Intrinsic.Control.EndIf
+		
+		
+		F.Data.DataTable.AcceptChanges("Order")
+		
+		'Fill in missing data
+		F.Data.Dictionary.CreateFromDataTable("BUApplDue","BUAppl","Order_No","Date_Due")
+		F.Data.Dictionary.SetDefaultReturn("BUApplDue",1900-01-01)
+		F.Data.Dictionary.CreateFromDataTable("BUApplOrder","BUAppl","Order_No","Date_Order")
+		F.Data.Dictionary.SetDefaultReturn("BUApplOrder",1900-01-01)
+		F.Data.Dictionary.CreateFromDataTable("BUApplSort","BUAppl","Order_No","Code_Sort")
+		F.Data.Dictionary.SetDefaultReturn("BUApplSort","")
+		
+		F.Data.DataTable.FillFromDictionary("Order","BUApplDue","Order_No","Date_Due")
+		F.Data.DataTable.FillFromDictionary("Order","BUApplOrder","Order_No","Date_Order")
+		F.Data.DataTable.FillFromDictionary("Order","BUApplSort","Order_No","Code_Sort")
+		
+		F.Data.Dictionary.Close("BUApplDue")
+		F.Data.Dictionary.Close("BUApplOrder")
+		F.Data.Dictionary.Close("BUApplSort")
+		'Off the top of my head this is the best way to go through and set this based on the conditions required
+		F.Intrinsic.Control.For(V.Local.iFor,0,V.DataTable.Appl.RowCount--,1)
+			F.Intrinsic.Control.For(V.Local.iForChange,0,V.DataTable.Order.RowCount--,1)
+				F.Intrinsic.Control.If(V.DataTable.Appl(V.Local.iFor).Order_No!FieldVal,=,V.DataTable.Order(V.Local.iForChange).Order_No!FieldVal)
+					F.Intrinsic.Control.SelectCase(V.DataTable.Order(V.Local.iForChange).Code_Sort!FieldVal)
+					
+						F.Intrinsic.Control.Case("1")
+							F.Data.DataTable.SetValue("Order",V.Local.iForChange,"Application",V.DataTable.Appl(V.Local.iFor).User_Field_16!FieldVal)
+						F.Intrinsic.Control.Case("3")
+							F.Data.DataTable.SetValue("Order",V.Local.iForChange,"Application",V.DataTable.Appl(V.Local.iFor).User_Field_46!FieldVal)
+						F.Intrinsic.Control.Case("5")
+							F.Data.DataTable.SetValue("Order",V.Local.iForChange,"Application",V.DataTable.Appl(V.Local.iFor).User_Field_76!FieldVal)
+						F.Intrinsic.Control.CaseElse
+							F.Data.DataTable.SetValue("Order",V.Local.iForChange,"Application","")
+					F.Intrinsic.Control.EndSelect
+				F.Intrinsic.Control.EndIf
+			F.Intrinsic.Control.Next(V.Local.iForChange)
+		F.Intrinsic.Control.Next(V.Local.iFor)
+		
+		F.Intrinsic.Control.For(V.Local.iFor,V.DataTable.Order.RowCount--,0,-1)
+			V.Local.sDNE.Set(V.Dictionary.Header_Dict![V.DataTable.Order(V.Local.iFor).Order_No!FieldVal])
+			
+			F.Intrinsic.Control.If(V.Local.sDNE,=,"DNE","AND",V.DataTable.Order(V.Local.iFor).Code_Sort!FieldValTrim,=,"")
+				F.Data.DataTable.DeleteRow("Order",V.Local.iFor)
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.Next(V.Local.iFor)
+		
+		F.Data.DataTable.AcceptChanges("Order")
+		
+		'Check if the value is within the range specified for Code Sort
+		F.Intrinsic.Control.If(V.Screen.Form1!chkBUAll.Value,=,0)
+			F.Intrinsic.Control.For(V.Local.iFor,V.DataTable.Order.RowCount--,0,-1)
+				F.Intrinsic.Control.If(V.DataTable.Order(V.Local.iFor).Code_Sort!FieldVal,<,V.Screen.Form1!dropdownlistBUFrm.Text,"OR",V.DataTable.Order(V.Local.iFor).Code_Sort!FieldVal,>,V.Screen.Form1!dropdownlistBUEnd.Text)
+					F.Data.DataTable.DeleteRow("Order",V.Local.iFor)
+				F.Intrinsic.Control.EndIf
+			F.Intrinsic.Control.Next(V.Local.iFor)
+		F.Intrinsic.Control.EndIf
+		
+		F.Data.DataTable.AcceptChanges("Order")
+		
+		'Check if the value is within the range specified for Application
+		F.Intrinsic.Control.If(V.Screen.Form1!chkAllAppl.Value,=,0)
+			F.Intrinsic.Control.For(V.Local.iFor,V.DataTable.Order.RowCount--,0,-1)
+				F.Intrinsic.Control.If(V.DataTable.Order(V.Local.iFor).Application!FieldVal,<,V.Screen.Form1!dropdownlistAPPLBegin.Text,"OR",V.DataTable.Order(V.Local.iFor).Application!FieldVal,>,V.Screen.Form1!dropdownlistAPPLEnd.Text)
+					F.Data.DataTable.DeleteRow("Order",V.Local.iFor)
+				F.Intrinsic.Control.EndIf
+			F.Intrinsic.Control.Next(V.Local.iFor)
+		F.Intrinsic.Control.EndIf
+		
+		F.Data.DataTable.AcceptChanges("Order")
+	
+		'Format data
+		F.Intrinsic.Control.For(V.Local.iForChange,0,V.DataTable.Order.RowCount--,1)
+			F.Intrinsic.Math.Round(V.DataTable.Order(v.Local.iForChange).EXTENSION!FieldVal,4,1,V.Local.fExtensionTemp)
+			F.Intrinsic.Math.Round(V.DataTable.Order(v.Local.iForChange).Qty_Ordered!FieldVal,4,1,V.Local.fQtyOrderedTemp)
+			F.Intrinsic.Math.Round(V.DataTable.Order(v.Local.iForChange).Cost!FieldVal,4,1,V.Local.fCostTemp)
+			F.Intrinsic.String.Left(V.DataTable.Order(v.Local.iForChange).APPLICATION!FieldVal,3,V.Local.sApplTemp)
+			
+			F.Data.DataTable.SetValue("Order",V.Local.iForChange,"Extension",V.Local.fExtensionTemp,"Qty_Ordered",V.Local.fQtyOrderedTemp,"Cost",V.Local.fCostTemp,"Application",V.Local.sApplTemp)			
+		F.Intrinsic.Control.Next(V.Local.iForChange)
+	
+	F.Intrinsic.Control.EndIf
+	
+	F.Data.Dictionary.Close("TempD")
+
+	'set default values
+	F.Data.DataTable.SetValue("Order",-1,"TRMNL",V.Caller.Terminal)
+	
+	F.Data.DataTable.AcceptChanges("Order")
+	F.Data.Datatable.SaveToDB("Order","con","GCG_3496_BU_APPL_RPT","",128)
+	
+	v.Local.iCnt.Declare
+	v.Local.sCompDate.Declare
+	v.Local.sSQL.Declare
+	f.Intrinsic.Control.For(v.Local.iCnt,0,v.DataTable.Order.RowCount--,1)
+		F.Intrinsic.String.Build("Select USER_1 from V_ORDER_HEADER where ORDER_NO = '{0}'",v.DataTable.Order(v.Local.iCnt).ORDER_NO!FieldValTrim,v.Local.sSQL)
+		f.ODBC.Connection!con.executeandreturn(v.Local.sSQL,v.Local.sCompDate)
+		f.Intrinsic.String.Build("Update GCG_3496_BU_APPL_RPT set DATE_COMPLETION = '{0}' where ORDER_NO = '{1}' and TRMNL = '{2}'",v.Local.sCompDate,v.DataTable.Order(v.Local.iCnt).ORDER_NO!FieldValTrim,v.Caller.Terminal,v.Local.sSQL)
+		f.ODBC.Connection!con.execute(v.Local.sSQL)
+	f.Intrinsic.Control.Next(v.Local.iCnt)
+	
+	F.Intrinsic.Control.CallSub(Printreport)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(errorhandler, "Sub", V.Ambient.CurrentSubroutine, "ErrNo", V.Ambient.ErrorNumber, "ErrDesc", V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+Program.Sub.Bookings.End
+
+program.sub.cmdcustbrwse_click.start
+
+'customer browser
+V.Local.sRet.Declare(String)
+V.Local.sTitles.Declare(String)
+V.Local.iWidths.Declare(Long)
+V.Local.sCust.Declare(String)
+
+
+F.Intrinsic.String.Split("Name*!*Customer ID","*!*",V.Local.sTitles)
+F.Intrinsic.String.Split("5000*!*1500","*!*",V.Local.iWidths)
+
+
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+F.Intrinsic.UI.Browser("Customer","con","select distinct NAME_CUSTOMER,CUSTOMER from V_CUSTOMER_MASTER order by NAME_CUSTOMER",V.Local.sTitles,V.Local.iWidths,7000,10000,V.Local.sRet)
+	F.Intrinsic.Control.If(V.Local.sRet,<>,"***CANCEL***")
+		F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+		F.Intrinsic.String.Concat(V.Local.sRet(1)," - ",V.Local.sRet(0),V.Local.sCust)
+'set selected item to correct txt field based on which browser is used
+		F.Intrinsic.Control.If(V.Args.CONTROLNAME,=,"CMDCUSTBRWSE1")
+			Gui.Form1.txtCustFrm.Text(V.Local.sCust)
+		F.Intrinsic.Control.Else
+			Gui.Form1.txtCustThru.Text(V.Local.sCust)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+
+
+program.sub.cmdcustbrwse_click.End
+
+program.sub.txtcustfrm_change.start
+
+Gui.Form1.txtCustThru.Text(V.Screen.Form1!txtCustFrm.Text)
+
+program.sub.txtcustfrm_change.End
+
+Program.Sub.SOByCutoff.Start
+
+
+V.Local.sSelX.Declare(String)
+V.Local.sSel.Declare(String)
+V.Local.sBegdate.Declare(String)
+V.Local.sEndDate.Declare(String)
+V.Local.sBegSP.Declare(String)
+V.Local.sEndSP.Declare(String)
+V.Local.sBegCust.Declare(String)
+V.Local.sEndCust.Declare(String)
+V.Local.sBegAppl.Declare(String)
+V.Local.sEndAppl.Declare(String)
+V.Local.iFor.Declare(Long)
+V.Local.sRet.Declare(String)
+
+V.uGlobal.uOrder.Redim(-1,-1)
+
+F.Intrinsic.String.Split(V.Screen.Form1!dropdownlistBegRep.Text,"-",V.Local.sBegSP)
+F.Intrinsic.String.Split(V.Screen.Form1!dropdownlistEndRep.Text,"-",V.Local.sEndSP)
+
+F.Intrinsic.String.Split(V.Screen.Form1!txtCustFrm.Text,"-",V.Local.sBegCust)
+F.Intrinsic.String.Split(V.Screen.Form1!txtCustThru.Text,"-",V.Local.sEndCust)
+
+F.Intrinsic.String.Split(V.Screen.Form1!dropdownlistAPPLBegin.Text,"-",V.Local.sBegAppl)
+F.Intrinsic.String.Split(V.Screen.Form1!dropdownlistAPPLEnd.Text,"-",V.Local.sEndAppl)
+
+F.Intrinsic.String.Concat("delete from ATG_BU_APPL_RPTS where TRMNL='",V.Caller.Terminal,"' or rtrim(TRMNL)=''",V.Local.sSelX)
+F.ODBC.Connection!Con.Execute(V.Local.sSelX)
+
+F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uOrder!DESCRIPTION,"DESCRIPTION")
+F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uOrder!DATE_DUE_CNV,"DATE_DUE")
+F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uOrder!DATE_ORDER_CNV,"DATE_ORDER")
+F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uOrder!CODE_SORT,"CODE_SORT")
+F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uOrder!APPLICATION,"APPLICATION")
+F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uOrder!COST,"COST")
+
+F.Intrinsic.String.Format(V.Screen.Form1!datepickerFrm.Value,"yyyymmdd",V.Local.sBegdate)
+'open
+F.Intrinsic.String.Concat("select ORDER_HEADER.ORDER_NO, ORDER_LINES.RECORD_NO,ORDER_LINES.PART, ORDER_LINES.DESCRIPTION, ORDER_LINES.QTY_ORDERED, ORDER_HEADER.CUSTOMER as NAME,  ORDER_HEADER.DATE_DUE_CNV as DATE_DUE, ORDER_HEADER.DATE_ORDER_CNV as DATE_ORDER, '' as APPLICATION, ORDER_HEADER.CODE_SORT, ORDER_HEADER.SALESPERSON, EXTENSION, COST from ORDER_HEADER  inner join ORDER_LINES on ORDER_HEADER.ORDER_NO=ORDER_LINES.ORDER_NO ","",V.Local.sSel)
+	F.Intrinsic.Control.If(V.Screen.Form1!chkAllAppl.Value,=,0)
+		F.Intrinsic.String.Concat(V.Local.sSel," left outer join ATG_OE_USER_FIELDS on ORDER_HEADER.ORDER_NO=ATG_OE_USER_FIELDS.ORDER_NO ",V.Local.sSel)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.String.Concat(V.Local.sSel,"  where ORDER_LINES.RECORD_TYPE='L' and ORDER_LINES.RECORD_NO<>'8000' and ORDER_LINES.LINE_TYPE<>'P'  and ORDER_HEADER.RECORD_NO='  A' ",V.Local.sSel)
+F.Intrinsic.String.Concat(V.Local.sSel," and Order_Lines.GL_Account between  '40000' AND '40160.99'  ",V.Local.sSel)
+F.Intrinsic.String.Concat(V.Local.sSel," and ORDER_HEADER.DATE_ORDER_CNV <= '",V.Local.sBegDate,"'",V.Local.sSel)
+	'appl range
+	F.Intrinsic.Control.If(V.Screen.Form1!chkAllAppl.Value,=,0)
+		F.Intrinsic.String.Concat(V.Local.sSel," and (left(USER_FIELD_16,3) between '",V.Local.sBegAppl.Trim,"' and '",V.Local.sEndAppl.Trim,"' or left(USER_FIELD_31,3) between '",V.Local.sBegAppl.Trim,"' and '",V.Local.sEndAppl.Trim,"' or left(USER_FIELD_46,3) between '",V.Local.sBegAppl.Trim,"' and '",V.Local.sEndAppl.Trim,"'or left(USER_FIELD_76,3) between '",V.Local.sBegAppl.Trim,"' and '",V.Local.sEndAppl.Trim,"')",V.Local.sSel)
+	F.Intrinsic.Control.EndIf
+	'rep range
+	F.Intrinsic.Control.If(V.Screen.Form1!chkAllReps.Value,=,0)
+		F.Intrinsic.String.Concat(V.Local.sSel," and ORDER_HEADER.SALESPERSON between '",V.Local.sBegSP(0).Trim,"' and '",V.Local.sEndSP(0).Trim,"'",V.Local.sSel)
+	F.Intrinsic.Control.EndIf
+	'cust range
+	F.Intrinsic.Control.If(V.Screen.Form1!chkALLCust.Value,=,0)
+		F.Intrinsic.String.Concat(V.Local.sSel," and ORDER_HEADER.CUSTOMER between '",V.Local.sBegCust(0).Trim,"' and '",V.Local.sEndCust(0).Trim,"'",V.Local.sSel)
+	F.Intrinsic.Control.EndIf
+	'BU range
+	F.Intrinsic.Control.If(V.Screen.Form1!chkBUAll.Value,=,0)
+		F.Intrinsic.String.Concat(V.Local.sSel," and ORDER_HEADER.CODE_SORT between '",V.Screen.Form1!dropdownlistBUFrm.Text,"' and '",V.Screen.Form1!dropdownlistBUend.Text,"'",V.Local.sSel)
+	F.Intrinsic.Control.EndIf
+F.ODBC.Connection!Con.OpenRecordsetRO("rstA",V.Local.sSel)
+	F.Intrinsic.Control.If(V.ODBC.Con!rstA.EOF,=,False)
+		F.Intrinsic.Variable.LoadUDTFromRecordset("Con","rstA","Variable.uGlobal.uOrder",False,0)
+	F.Intrinsic.Control.EndIf
+F.ODBC.Con!rstA.Close
+
+'closed
+F.Intrinsic.String.Concat("select ORDER_HIST_HEAD.ORDER_NO, ORDER_HIST_LINE.PART,ORDER_HIST_LINE.DESCRIPTION, ORDER_HIST_LINE.QTY_ORDERED, ORDER_HIST_HEAD.CUSTOMER as NAME, ORDER_HIST_HEAD.DATE_ORDER_DUE as DATE_DUE,ORDER_HIST_HEAD.DATE_ORDER,  '' as APPLICATION, CODE_SORT, SALESPERSON, ORDER_HIST_LINE.EXTENSION, ORDER_HIST_LINE.COST,ORDER_HIST_LINE.ORDER_LINE as RECORD_NO from ORDER_HIST_HEAD ","",V.Local.sSel)
+	F.Intrinsic.String.Concat(V.Local.sSel,"inner join ORDER_HIST_LINE on ORDER_HIST_HEAD.ORDER_NO = ORDER_HIST_LINE.ORDER_NO  and Order_hist_Head.Order_Suffix=Order_Hist_line.Order_Suffix ",V.Local.sSel)
+	F.Intrinsic.Control.If(V.Screen.Form1!chkAllAppl.Value,=,0)
+		F.Intrinsic.String.Concat(V.Local.sSel," left outer join ATG_OE_USER_FIELDS on ORDER_HIST_HEAD.ORDER_NO=ATG_OE_USER_FIELDS.ORDER_NO ",V.Local.sSel)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.String.Concat(V.Local.sSel," where ORDER_HIST_LINE.ORDER_LINE<>'8000' and ORDER_HIST_LINE.LINE_TYPE<>'P'",V.Local.sSel)
+F.Intrinsic.String.Concat(V.Local.sSel," and ORDER_HIST_LINE.GL_Account between  '40000' AND '40160.99'  ",V.Local.sSel)
+F.Intrinsic.String.Concat(V.Local.sSel," and  ORDER_HIST_HEAD.DATE_ORDER <='",V.Local.sBegdate,"' and ORDER_HIST_Line.Date_Shipped> '",V.Local.sBegDate,"'",V.Local.sSel)
+	'rep range
+	F.Intrinsic.Control.If(V.Screen.Form1!chkAllReps.Value,=,0)
+		F.Intrinsic.String.Concat(V.Local.sSel," and SALESPERSON between '",V.Local.sBegSP(0).Trim,"' and '",V.Local.sEndSP(0).Trim,"'",V.Local.sSel)
+	F.Intrinsic.Control.EndIf
+	'cust range
+	F.Intrinsic.Control.If(V.Screen.Form1!chkALLCust.Value,=,0)
+		F.Intrinsic.String.Concat(V.Local.sSel," and ORDER_HIST_HEAD.CUSTOMER between '",V.Local.sBegCust(0).Trim,"' and '",V.Local.sEndCust(0).Trim,"'",V.Local.sSel)
+	F.Intrinsic.Control.EndIf
+	'BU range
+	F.Intrinsic.Control.If(V.Screen.Form1!chkBUAll.Value,=,0)
+		F.Intrinsic.String.Concat(V.Local.sSel," and ORDER_HIST_HEAD.CODE_SORT between '",V.Screen.Form1!dropdownlistBUFrm.Text,"' and '",V.Screen.Form1!dropdownlistBUend.Text,"'",V.Local.sSel)
+	F.Intrinsic.Control.EndIf
+	'appl range
+	F.Intrinsic.Control.If(V.Screen.Form1!chkAllAppl.Value,=,0)
+		F.Intrinsic.String.Concat(V.Local.sSel," and (left(USER_FIELD_16,3) between '",V.Local.sBegAppl.Trim,"' and '",V.Local.sEndAppl.Trim,"' or left(USER_FIELD_31,3) between '",V.Local.sBegAppl.Trim,"' and '",V.Local.sEndAppl.Trim,"' or left(USER_FIELD_46,3) between '",V.Local.sBegAppl.Trim,"' and '",V.Local.sEndAppl.Trim,"'or left(USER_FIELD_76,3) between '",V.Local.sBegAppl.Trim,"' and '",V.Local.sEndAppl.Trim,"')",V.Local.sSel)
+	F.Intrinsic.Control.EndIf
+F.ODBC.Connection!Con.OpenRecordsetRO("rstA",V.Local.sSel)
+	F.Intrinsic.Control.If(V.ODBC.Con!rstA.EOF,=,False)
+		F.Intrinsic.Variable.LoadUDTFromRecordset("Con","rstA","Variable.uGlobal.uOrder",True,0)
+	F.Intrinsic.Control.EndIf
+F.ODBC.Con!rstA.Close
+
+'get all blanket orders
+F.Intrinsic.String.Concat("select distinct ORDER_NO,RECORD_NO,BLANKET_NO,QTY_ORIGINAL ,PRICE from ORDER_LINES where BLANKET_NO<>'' and Qty_Shipped <> 0","",V.Local.sSel)
+F.Intrinsic.String.Concat(V.Local.sSel," and DATE_ORDER <='",V.Local.sBegdate,"'",V.Local.sSel)
+F.ODBC.Connection!Con.OpenRecordsetRO("rstA",V.Local.sSel)
+	F.Intrinsic.Control.If(V.ODBC.Con!rstA.EOF,=,False)
+		F.Intrinsic.Variable.LoadUDTFromRecordset("Con","rstA","Variable.uGlobal.uBlanket",True,0)
+	F.Intrinsic.Control.EndIf
+F.ODBC.Con!rstA.Close
+
+F.Intrinsic.String.Concat("select distinct ORDER_NO,ORDER_LINE as RECORD_NO,BLANKET_NO,QTY_ORIGINAL ,PRICE from ORDER_HIST_LINE where BLANKET_NO<>'' ","",V.Local.sSel)
+F.Intrinsic.String.Concat(V.Local.sSel," and DATE_ORDER <='",V.Local.sBegdate,"' and Date_Shipped>='",V.Local.sBegdate,"'",V.Local.sSel)
+F.ODBC.Connection!Con.OpenRecordsetRO("rstA",V.Local.sSel)
+	F.Intrinsic.Control.If(V.ODBC.Con!rstA.EOF,=,False)
+		F.Intrinsic.Variable.LoadUDTFromRecordset("Con","rstA","Variable.uGlobal.uBlanket",True,0)
+	F.Intrinsic.Control.EndIf
+F.ODBC.Con!rstA.Close
+
+'remove blnket releases
+F.Intrinsic.Control.For(V.Local.iFor,V.uGlobal.uBlanket!ORDER_NO.LBound,V.uGlobal.uBlanket!ORDER_NO.UBound,1)
+	Function.Intrinsic.Variable.UDTMultiFlag(V.uGlobal.uOrder!ORDER_NO,V.uGlobal.uBlanket(v.Local.iFor)!ORDER_NO,V.uGlobal.uOrder!Record_NO,V.uGlobal.uBlanket(v.Local.iFor)!Record_NO)
+F.Intrinsic.Control.Next(V.Local.iFor)
+Function.Intrinsic.Variable.UDTDeleteFlagged(V.uGlobal.uOrder)
+
+
+'set trmnl
+F.Intrinsic.Variable.UDTSetMemberValue(V.uGlobal.uOrder!Trmnl,V.Caller.Terminal)
+F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uOrder!Trmnl,"Trmnl")
+
+'save data to report table
+F.Intrinsic.String.Concat("select * from ATG_BU_APPL_RPTS ","",V.Local.sSelX)
+F.ODBC.Connection!Con.OpenRecordsetRW("rstX",V.Local.sSelX)
+	F.Intrinsic.Variable.SaveUDTToRecordset("Con","rstX","variable.uGlobal.uOrder")
+F.ODBC.Con!rstX.Close
+
+F.Intrinsic.Control.CallSub(Printreport)
+
+
+Program.Sub.SOByCutoff.End
+
+program.sub.dropdownlistrpttype_click.start
+F.Intrinsic.Control.Try
+
+	F.Intrinsic.Control.If(V.Screen.Form1!dropdownlistRptType.Text,=,"Open Order by Cutoff Date")
+		Gui.Form1.datepickerThru.Visible(false)
+		Gui.Form1.chkAllDates.Visible(false)
+		Gui.Form1.chkClosed.Visible(false)
+		Gui.Form1.chkopen.Visible(false)
+		Gui.Form1.lblto.Visible(false)
+		Gui.Form1.lblDate.Caption("Cutoff Date")
+	F.Intrinsic.Control.Else
+		Gui.Form1.datepickerThru.Visible(True)
+		Gui.Form1.chkAllDates.Visible(True)
+		Gui.Form1.chkClosed.Visible(True)
+		Gui.Form1.chkopen.Visible(True)
+		Gui.Form1.lblto.Visible(True)
+		Gui.Form1.lblDate.Caption("Reporting Period")
+	F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(errorhandler, "Sub", V.Ambient.CurrentSubroutine, "ErrNo", V.Ambient.ErrorNumber, "ErrDesc", V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+program.sub.dropdownlistrpttype_click.End
+
+Program.Sub.errorhandler.Start
+F.Intrinsic.Control.Try
+	V.Local.sError.Declare(String)
+	
+	'Error handling
+	F.Intrinsic.String.Build("Project: Project GCG_3496_BU_APPL_REPORTS.g2u{0}{0}Subroutine: {1}{0}Error Occurred {2} with description {3}",V.Ambient.Newline,V.Args.Sub,V.Args.ErrNo,V.Args.ErrDesc,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError,"Error Occured")
+	F.Intrinsic.Control.CallSub(form1_Unload)
+	
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: Project GCG_3496_BU_APPL_REPORTS.g2u{0}{0}Subroutine: {1}{0}Error Occurred {2} with description {3}",V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError,"Error Occured")
+	F.Intrinsic.Control.CallSub(form1_Unload)
+F.Intrinsic.Control.EndTry
+Program.Sub.errorhandler.End
+
+Program.Sub.Comments.Start
+${$0$}$ATG_BU_APPL_REPORTS$}$JCT$}$5/17/2012$}$False
+${$4$}$0$}$$}$0$}$-1$}$JCT$}$5/17/2012 11:43:07 AM$}$added new "report" option.
+Sales Order by Cutoff Date
+Program.Sub.Comments.End
+
